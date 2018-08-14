@@ -33,9 +33,6 @@ h3{
 	font-size: 24px;
 	line-height: 23px
 }
-p{
-	margin-top: 30px
-}
 a{
 	outline: none;
 	text-decoration: none
@@ -43,4 +40,53 @@ a{
 img{
 	max-width: 100%;
 	height: auto
+}
+header{
+	background: #dfedee;
+}
+.header--top{
+	margin: 0 auto;
+	div{
+		display: inline-block;
+		margin: 10px 0;
+	}
+	.header--top--socserv{
+		a {
+			color: #627176;
+			margin-right: 30px;
+		}
+	}
+	.header--top--city{
+		margin: 0 40px;
+		a{
+			color: #111;
+			text-decoration: dashed;
+			font-weight: bold;
+		}
+	}
+	.header--top--phone{
+		a{
+			color: #111;
+			font-weight: bold;
+		}	
+	}
+	.header--top--text{
+		p{
+			color: #627176;
+			margin: 0 30px;		
+		}
+	}
+	.header--top--record{
+		a{
+			color: #006666;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: dashed;
+		}
+	}
+}
+@media screen and (min-width: 1200px){
+	.header--top{
+		width:1200px;
+	}
 }
