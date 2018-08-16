@@ -8,28 +8,66 @@ html(lang="ru")
 	body
 		//Begin header
 		header
-			.header--top
-				.header--top--socserv
-					noindex
-						a(href="#") INSTAGRAM
-						a(href="#") ВКОНТАКТЕ
-						a(href="#") FACEBOOK
-				.header--top--city
-					a(href="#") Нижний Новгород
-				.header--top--phone
-					a(href="tel:88002341199") 8 800 234 11 99
-				.header--top--text
-					p Звонок по России - бесплатный
-				.header--top--record
-					a(htef="#") Записаться ко врачу					
+			.header_top
+				.header_top_back
+					.header_top_socserv
+						noindex
+							a(href="#") INSTAGRAM
+							a(href="#") ВКОНТАКТЕ
+							a(href="#") FACEBOOK
+					.header_top_city
+						a(href="#") Нижний Новгород
+					.header_top_phone
+						a(href="tel:88002341199") 8 800 234 11 99
+					.header_top_text
+						p Звонок по России - бесплатный
+					.header_top_record
+						a(htef="#") Записаться ко врачу
+			.header_bottom
+				.header_bottom_logo
+					img(src="./img/logo.jpg")
+				.header_bottom_menu
+					.menu_el
+						.menu_inner
+							a(href="#") Компания
+					.menu_el
+						.menu_inner
+							a(href="#") Интернет-магазин
+					.menu_el
+						.menu_inner
+							a(href="#") Услуги
+					.menu_el
+						.menu_inner
+							a(href="#") Акции
+					.menu_el
+						.menu_inner
+							a(href="#") Адреса салонов
+				.header_bottom_icons
 		//End header
-		#fullpage
-			section.section#firstPage
-				//Begin banner
-				.banner.js
-					ul
-						li Первый элемент списка
-				//End banner
+		//Begin content
+		.content
+			.menu_and_banner
+				.left_menu
+					.left_menu_catalog
+						p 
+							a(href="#") Каталог товаров
+						a(href="#") Контактные линзы
+						a(href="#") Медицинские оправы и очки
+						a(href="#") Солнцезащитные очки
+						a(href="#") Подарочные сертификаты
+						a(href="#") Сопутствующие товары
+					.left_menu_services
+						p 
+							a(href="#") Услуги
+						a(href="#") Проверка зрения
+						a(href="#") Детский врач	
+						a(href="#") Лазерная коррекция
+						a(href="#") Подбор изготовление очков
+						a(href="#") Подбор и виды контактных линз
+						a(href="#") Ремонт и сервисное обслуживание
+				.main_banner
+					img(src="./img/banner_1.jpg")
+		//End content
 		//Begin footer
 		footer
 		//End footer			
