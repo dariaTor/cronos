@@ -343,7 +343,7 @@ section{
 	.catalog_blocks{
 		display: flex;
 		.product_item{
-		    margin: 24px 14px 10px 14px;
+		    margin: 20px 0;
 			text-align: center;
 			background: #fff;
 		    position: relative;
@@ -351,11 +351,31 @@ section{
 		    vertical-align: top;
 		    box-sizing: border-box;
 		    max-width: 100%;
-		    min-height: 373px;
+		    min-height: 351px;
 		    .image{
 		    	min-height: 175px;
 		    	width: 100%;
     			position: relative;
+    			.like_icons{
+    				position: absolute;
+    				top: 14px;
+    				right: 14px;
+    				z-index: 4;
+    				span{
+    					visibility: visible;
+    					display: block;
+    					cursor: pointer;
+    					i{
+    						background: url('../img/like.png');
+    						display: block;
+    						width: 20px;
+    						height: 17px;
+    					}
+    					i:hover{
+    						background: url('../img/like_add.png');
+    					}
+    				}
+    			}
     			a{
     				display: inline-block;
     			}
@@ -378,7 +398,7 @@ section{
 		    	display: block;
 		    	width: 100%;
 		    	text-align: center;
-		    	bottom: 7px;
+		    	bottom: 40px;
 		    	top: initial;
 		    	.flag{
 		    		display: inline-block;
@@ -390,6 +410,76 @@ section{
 		    	}
 		    }
 		}
+		.product_item:hover{
+			box-shadow: 0 0 25px 0 #d4d2d2;
+			overflow: hidden;
+			position: absolute;
+			left:0;
+			z-index: 200;
+		}
+		.col-descr{
+			margin-bottom: 17px;
+		}
+		.name{
+			font-size: 18px;
+			font-weight: bold;
+			color: #212121;
+			margin: 0 35px 17px;
+			display: block;
+			line-height: 24px;
+		}
+		span{
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+			color: #000;
+		}
+		span.act{
+			color: #fd4e3d;
+		}
+		span.old{
+			color: #959595;
+			text-decoration: line-through;
+			margin: 8px 0 0;
+		}
+		.col-buttons{
+			display: none;
+			span{
+				color: #959595;
+				font-size: 17px;
+				font-weight: normal;
+			}
+			.add_basket{
+				width: 190px;
+				margin: 0 auto;
+				cursor: pointer;
+				span{
+					border-radius: 23px;
+					display: block;
+					background: #0bb998;
+					color: #fff;
+					text-transform: uppercase;
+					font-size: 16px;
+					padding: 13px 0;
+				}
+			}
+			.buy_one_click{
+				margin: 23px 0 13px;
+			}
+			.info_stock{
+				margin-bottom: 23px;
+			}
+			.buy_one_click span,.info_stock span{
+				display: inline;
+				border-bottom: 1px dotted #959595;
+
+			}
+		}
+		.product_item:hover .col-buttons{
+			display: block;
+		}
 	}
 }
 @media screen and (min-width: 768px){
@@ -398,7 +488,7 @@ section{
 		height: 253px;
 	}
 	.col-image > .image{
-		/*display: table-cell;*/
+		display: table-cell;
 		vertical-align: middle;
 	}
 }
