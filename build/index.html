@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./styles/test.css">
     <link rel="stylesheet" type="text/css" href="./styles/media.css">
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </head>
   <body>
     <!--Begin header-->
@@ -19,20 +23,86 @@
           <div class="header_top_text">
             <p>Звонок по России - бесплатный</p>
           </div>
-          <div class="header_top_record"><a htef="#">Записаться ко врачу</a></div>
+          <div class="header_top_record"><a href="#">Записаться ко врачу</a></div>
         </div>
       </div>
       <div class="header_bottom">
-        <div class="header_bottom_logo"><img src="./img/logo.jpg"></div>
+        <div class="header_bottom_logo"><img src="./img/logo.png"></div>
         <div class="header_bottom_menu">
           <div class="menu_el">
-            <div class="menu_inner"><a href="#">Компания</a></div>
+            <div class="menu_inner list_inner"><a class="link" href="#">Компания</a>
+              <div class="menu_content">
+                <div class="menu_contentb">
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">О компании</a></li>
+                      <li class="newmenu_element"><a href="#">Новости и блог</a></li>
+                    </ul>
+                  </div>
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Карьера</a></li>
+                      <li class="newmenu_element"><a href="#">Миссия и ценности				</a></li>
+                    </ul>
+                  </div>
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Арендодателям</a></li>
+                      <li class="newmenu_element"><a href="#">Контакты			</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="menu_el">
-            <div class="menu_inner"><a href="#">Интернет-магазин</a></div>
+            <div class="menu_inner list_inner"><a class="link" href="#">Интернет-магазин</a>
+              <div class="menu_content">
+                <div class="menu_contentb">
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Контактные линзы</a></li>
+                      <li class="newmenu_element"><a href="#">Медицинские оправы и очки</a></li>
+                    </ul>
+                  </div>
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Солнцезащитные очки</a></li>
+                      <li class="newmenu_element"><a href="#">Подарочные сертификаты</a></li>
+                    </ul>
+                  </div>
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Сопутствующие товары</a></li>
+                      <li class="newmenu_element"><a href="#">Оплата и доставка интернет-магазина</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="menu_el">
-            <div class="menu_inner"><a href="#">Услуги</a></div>
+            <div class="menu_inner list_inner"><a class="link" href="#">Услуги</a>
+              <div class="menu_content">
+                <div class="menu_contentb">
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Проверка зрения</a></li>
+                      <li class="newmenu_element"><a href="#">Детский врач и кабинет охраны зрения</a></li>
+                      <li class="newmenu_element"><a href="#">Цены на услуги</a></li>
+                      <li class="newmenu_element"><a href="#">Отзывы		</a></li>
+                    </ul>
+                  </div>
+                  <div class="upmenu_cont">
+                    <ul>
+                      <li class="newmenu_element"><a href="#">Подбор изготовление очков</a></li>
+                      <li class="newmenu_element"><a href="#">Подбор и виды контактных линз</a></li>
+                      <li class="newmenu_element"><a href="#">Ремонт и сервисное обслуживание очков</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="menu_el">
             <div class="menu_inner"><a href="#">Акции</a></div>
@@ -41,27 +111,181 @@
             <div class="menu_inner"><a href="#">Адреса салонов</a></div>
           </div>
         </div>
-        <div class="header_bottom_icons"></div>
+        <div class="header_bottom_icons">
+          <div class="header_search"><a href="#"><img src="./img/search.png"></a></div>
+          <div class="header_user"><a href="#"><img src="./img/user.png"></a></div>
+          <div class="header_like"><a href="#"><img src="./img/like.png">
+              <div class="count">(40)</div></a></div>
+          <div class="header_basket"><a href="#"><img src="./img/basket.png">
+              <div class="count">(12)</div></a></div>
+        </div>
       </div>
     </header>
     <!--End header-->
     <!--Begin content-->
-    <div class="content">
-      <div class="menu_and_banner">
-        <div class="left_menu">
-          <div class="left_menu_catalog">
-            <p> <a href="#">Каталог товаров</a></p><a href="#">Контактные линзы</a><a href="#">Медицинские оправы и очки</a><a href="#">Солнцезащитные очки</a><a href="#">Подарочные сертификаты</a><a href="#">Сопутствующие товары</a>
+    <section>
+      <div class="content">
+        <div class="menu_and_banner">
+          <div class="left_menu">
+            <div class="left_menu_catalog">
+              <p><a href="#">Каталог товаров</a></p><a href="#">Контактные линзы</a><a href="#">Медицинские оправы и очки</a><a href="#">Солнцезащитные очки</a><a href="#">Подарочные сертификаты</a><a href="#">Сопутствующие товары</a>
+            </div>
+            <div class="left_menu_services">
+              <p><a href="#">Услуги</a></p><a href="#">Проверка зрения</a><a href="#">Детский врач</a><a href="#">Подбор изготовление очков</a><a href="#">Подбор и виды контактных линз</a><a href="#">Ремонт и сервисное обслуживание очков</a>
+            </div>
           </div>
-          <div class="left_menu_services">
-            <p> <a href="#">Услуги</a></p><a href="#">Проверка зрения</a><a href="#">Детский врач	</a><a href="#">Лазерная коррекция</a><a href="#">Подбор изготовление очков</a><a href="#">Подбор и виды контактных линз</a><a href="#">Ремонт и сервисное обслуживание</a>
+          <div class="main_banner"><img src="./img/banner_2.jpg"></div>
+        </div>
+      </div>
+      <div class="offer_on_main">
+        <div class="offer_blocks">
+          <div class="p_blocks">
+            <ul>
+              <li class="sale active">Распродажа</li>
+              <li class="hit">Хиты продаж</li>
+              <li class="new">Новинки</li>
+            </ul>
+          </div>
+          <div class="filter_on_main">Фильтр<span> +</span></div>
+        </div>
+        <div class="catalog_blocks">
+          <div class="sale">
+            <div class="row">
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                      <div class="flaglist">
+                        <div class="flag sale">Распродажа -40%</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                      <div class="flaglist">
+                        <div class="flag sale">Распродажа -40%</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                      <div class="flaglist">
+                        <div class="flag sale">Распродажа -40%</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                      <div class="flaglist">
+                        <div class="flag sale">Распродажа -40%</div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-3 col-xs-12">
+                <div class="product_item">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-image">
+                      <div class="image">
+                        <div class="thumbnail two_img"><a href="#"><img class="thumb" src="./img/ray-ban.jpg"></a></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-descr"><a class="name" href="#">Солнцезащитные очки Ray-Ban 4171-86513</a>
+                      <div class="price_bl"><span class="act">4 000 руб. </span><span class="old">4 100 руб.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="main_banner"><img src="./img/banner_1.jpg"></div>
       </div>
-    </div>
+    </section>
     <!--End content-->
     <!--Begin footer-->
     <footer></footer>
-    <!--End footer			-->
+    <!--End footer-->
+    <div class="modal"></div>
   </body>
 </html>

@@ -5,6 +5,10 @@ html(lang="ru")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" type="text/css" href="./styles/test.css")
 		link(rel="stylesheet" type="text/css" href="./styles/media.css")
+		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
+		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
+		script(type="text/javascript" src="./js/jquery.min.js")
+		script(type="text/javascript" src="./js/main.js")
 	body
 		//Begin header
 		header
@@ -22,20 +26,80 @@ html(lang="ru")
 					.header_top_text
 						p Звонок по России - бесплатный
 					.header_top_record
-						a(htef="#") Записаться ко врачу
+						a(href="#") Записаться ко врачу
 			.header_bottom
 				.header_bottom_logo
-					img(src="./img/logo.jpg")
+					img(src="./img/logo.png")
 				.header_bottom_menu
 					.menu_el
-						.menu_inner
-							a(href="#") Компания
+						.menu_inner.list_inner
+							a.link(href="#") Компания
+							.menu_content
+								.menu_contentb
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") О компании
+											li.newmenu_element
+												a(href="#") Новости и блог
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Карьера
+											li.newmenu_element
+												a(href="#") Миссия и ценности				
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Арендодателям
+											li.newmenu_element
+												a(href="#") Контакты			
 					.menu_el
-						.menu_inner
-							a(href="#") Интернет-магазин
+						.menu_inner.list_inner
+							a.link(href="#") Интернет-магазин
+							.menu_content
+								.menu_contentb
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Контактные линзы
+											li.newmenu_element
+												a(href="#") Медицинские оправы и очки
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Солнцезащитные очки
+											li.newmenu_element
+												a(href="#") Подарочные сертификаты
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Сопутствующие товары
+											li.newmenu_element
+												a(href="#") Оплата и доставка интернет-магазина
 					.menu_el
-						.menu_inner
-							a(href="#") Услуги
+						.menu_inner.list_inner
+							a.link(href="#") Услуги
+							.menu_content
+								.menu_contentb
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Проверка зрения
+											li.newmenu_element
+												a(href="#") Детский врач и кабинет охраны зрения
+											li.newmenu_element
+												a(href="#") Цены на услуги
+											li.newmenu_element
+												a(href="#") Отзывы		
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Подбор изготовление очков
+											li.newmenu_element
+												a(href="#") Подбор и виды контактных линз
+											li.newmenu_element
+												a(href="#") Ремонт и сервисное обслуживание очков
 					.menu_el
 						.menu_inner
 							a(href="#") Акции
@@ -43,31 +107,90 @@ html(lang="ru")
 						.menu_inner
 							a(href="#") Адреса салонов
 				.header_bottom_icons
+					.header_search
+						a(href="#")
+							img(src="./img/search.png")
+					.header_user
+						a(href="#")
+							img(src="./img/user.png")
+					.header_like
+						a(href="#")
+							img(src="./img/like.png")
+							.count (40)
+					.header_basket
+						a(href="#")
+							img(src="./img/basket.png")
+							.count (12)
 		//End header
 		//Begin content
-		.content
-			.menu_and_banner
-				.left_menu
-					.left_menu_catalog
-						p 
-							a(href="#") Каталог товаров
-						a(href="#") Контактные линзы
-						a(href="#") Медицинские оправы и очки
-						a(href="#") Солнцезащитные очки
-						a(href="#") Подарочные сертификаты
-						a(href="#") Сопутствующие товары
-					.left_menu_services
-						p 
-							a(href="#") Услуги
-						a(href="#") Проверка зрения
-						a(href="#") Детский врач	
-						a(href="#") Лазерная коррекция
-						a(href="#") Подбор изготовление очков
-						a(href="#") Подбор и виды контактных линз
-						a(href="#") Ремонт и сервисное обслуживание
-				.main_banner
-					img(src="./img/banner_1.jpg")
+		section
+			.content
+				.menu_and_banner
+					.left_menu
+						.left_menu_catalog
+							p
+								a(href="#") Каталог товаров
+							a(href="#") Контактные линзы
+							a(href="#") Медицинские оправы и очки
+							a(href="#") Солнцезащитные очки
+							a(href="#") Подарочные сертификаты
+							a(href="#") Сопутствующие товары
+						.left_menu_services
+							p
+								a(href="#") Услуги
+							a(href="#") Проверка зрения
+							a(href="#") Детский врач
+							a(href="#") Подбор изготовление очков
+							a(href="#") Подбор и виды контактных линз
+							a(href="#") Ремонт и сервисное обслуживание очков
+					.main_banner
+						img(src="./img/banner_2.jpg")
+			.offer_on_main
+				.offer_blocks
+					.p_blocks
+						ul
+							li.sale.active Распродажа
+							li.hit Хиты продаж
+							li.new Новинки
+					.filter_on_main Фильтр
+						span  +
+				.catalog_blocks
+					.sale
+						.row
+							- for (var x = 0; x < 4; x++)
+								.col-sm-4.col-md-3.col-xs-12
+									.product_item
+										.row
+											.col-xs-6.col-sm-12.col-image
+												.image
+													.thumbnail.two_img
+														a(href="#")
+															img.thumb(src="./img/ray-ban.jpg")
+												.flaglist
+													.flag.sale Распродажа -40%
+											.col-xs-6.col-sm-12.col-descr
+												a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+												.price_bl
+													span.act 4 000 руб. 
+													span.old 4 100 руб.
+
+						.row
+							- for (var x = 0; x < 4; x++)
+								.col-sm-4.col-md-3.col-xs-12
+									.product_item
+										.row
+											.col-xs-6.col-sm-12.col-image
+												.image
+													.thumbnail.two_img
+														a(href="#")
+															img.thumb(src="./img/ray-ban.jpg")
+											.col-xs-6.col-sm-12.col-descr
+												a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+												.price_bl
+													span.act 4 000 руб. 
+													span.old 4 100 руб.
 		//End content
 		//Begin footer
 		footer
-		//End footer			
+		//End footer
+		.modal

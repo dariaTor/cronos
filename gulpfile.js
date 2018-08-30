@@ -51,6 +51,11 @@ gulp.task('html:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
+gulp.task('scripts', function () {
+  gulp.src('./bower_components/jquery/dist/jquery.min.js')
+  .pipe(gulp.dest('./build/js/'));
+});
+
 gulp.task('sass-compile', function() {
 	return 	gulp.src('./src/styles/**/*.scss')
 			.pipe(sourcemaps.init())
@@ -75,9 +80,22 @@ gulp.task('pug', function () {
         }))
 });
 
+
+gulp.task('browser-sync', function () {
+  var files = [
+    './build/index.html',
+    './build/styles/*.css'
+  ];  
+  browserSync.init(files, {
+    server: {
+      baseDir: './build'
+    }
+  });
+});
+
 gulp.task('watch', function(){
 	gulp.watch('./src/styles/**/*.scss', ['sass-compile']);
     gulp.watch('./src/pug/*.pug', ['pug']);
 });
 
-gulp.task("default", ["sass-compile", "watch"]);
+gulp.task("default", ["sass-compile", "watch", "browser-sync"]);
