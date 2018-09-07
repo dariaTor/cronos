@@ -54,6 +54,12 @@ gulp.task('html:build', function () {
 gulp.task('scripts', function () {
   gulp.src('./bower_components/jquery/dist/jquery.min.js')
   .pipe(gulp.dest('./build/js/'));
+  gulp.src('./bower_components/semantic-ui-dropdown/dropdown.min.js')
+  .pipe(gulp.dest('./build/js/'));
+  gulp.src('./bower_components/semantic-ui-dropdown/index.js')
+  .pipe(gulp.dest('./build/js/'));
+  gulp.src('./bower_components/semantic-ui-transition/transition.min.js')
+  .pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('sass-compile', function() {
@@ -84,7 +90,8 @@ gulp.task('pug', function () {
 gulp.task('browser-sync', function () {
   var files = [
     './build/index.html',
-    './build/styles/*.css'
+    './build/styles/*.css',
+    './build/js/*.js'
   ];  
   browserSync.init(files, {
     server: {
