@@ -35,13 +35,11 @@ html(lang="ru")
 					.header_top_record
 						a(href="#") Записаться ко врачу
 			.header_bottom
-				.header-menu-mobile
-					img(src="./img/menu_mobile.png")
-				.header_bottom_logo
+				.header-menu-mobile.mb
+				.header_bottom_logo.mb
 					img(src="./img/logo.png")
-				.header__element
-					.header_block_mobile
-					.header_bottom_menu
+				.header__element.mb
+					.header_menu_desktop
 						.menu_el
 							.menu_inner.list_inner
 								a.link(href="#") Компания
@@ -58,13 +56,13 @@ html(lang="ru")
 												li.newmenu_element
 													a(href="#") Карьера
 												li.newmenu_element
-													a(href="#") Миссия и ценности				
+													a(href="#") Миссия и ценности
 										.upmenu_cont
 											ul
 												li.newmenu_element
 													a(href="#") Арендодателям
 												li.newmenu_element
-													a(href="#") Контакты			
+													a(href="#") Контакты
 						.menu_el
 							.menu_inner.list_inner
 								a.link(href="#") Интернет-магазин
@@ -102,7 +100,7 @@ html(lang="ru")
 												li.newmenu_element
 													a(href="#") Цены на услуги
 												li.newmenu_element
-													a(href="#") Отзывы		
+													a(href="#") Отзывы
 										.upmenu_cont
 											ul
 												li.newmenu_element
@@ -117,20 +115,19 @@ html(lang="ru")
 						.menu_el
 							.menu_inner
 								a(href="#") Адреса салонов
-					.header_bottom_icons
 						.header_search
 							a(href="#")
 								img(src="./img/search.png")
 						form.search-menu-block(action="" method="get")
 							.row
-								#title-search.col-sm-10
-									input.search-input(placeholder="Введите ваш запрос, например «Контактные линзы Acuvue»" type="text" size="15" maxlength="50")
-								.col-sm-2
+								#title-search.col-sm-8.col-md-9
+									input.search-input(placeholder="Введите ваш запрос" type="text" size="15" maxlength="50")
+								.col-sm-4.col-md-3
 									.btn-block
 										button(type="submit") Найти
 										.close-search-btn
 											img(src="./img/close.png")
-				.header_bottom_icons
+				.header_bottom_icons.mb
 						.header_user
 							a(href="#")
 								img(src="./img/user.png")
@@ -142,6 +139,87 @@ html(lang="ru")
 							a(href="#")
 								img(src="./img/basket.png")
 								.count (12)
+				.header_menu_mobile
+					.menu_el
+						.menu_inner.list_inner
+							a.link(href="#") Компания
+							.menu_content
+								.menu_contentb
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") О компании
+											li.newmenu_element
+												a(href="#") Новости и блог
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Карьера
+											li.newmenu_element
+												a(href="#") Миссия и ценности
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Арендодателям
+											li.newmenu_element
+												a(href="#") Контакты
+					.menu_el
+						.menu_inner.list_inner
+								a.link(href="#") Интернет-магазин
+								.menu_content
+									.menu_contentb
+										.upmenu_cont
+											ul
+												li.newmenu_element
+													a(href="#") Контактные линзы
+												li.newmenu_element
+													a(href="#") Медицинские оправы и очки
+										.upmenu_cont
+											ul
+												li.newmenu_element
+													a(href="#") Солнцезащитные очки
+												li.newmenu_element
+													a(href="#") Подарочные сертификаты
+										.upmenu_cont
+											ul
+												li.newmenu_element
+													a(href="#") Сопутствующие товары
+												li.newmenu_element
+													a(href="#") Оплата и доставка интернет-магазина
+					.menu_el
+						.menu_inner.list_inner
+							a.link(href="#") Услуги
+							.menu_content
+								.menu_contentb
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Проверка зрения
+											li.newmenu_element
+												a(href="#") Детский врач и кабинет охраны зрения
+											li.newmenu_element
+												a(href="#") Цены на услуги
+											li.newmenu_element
+												a(href="#") Отзывы
+									.upmenu_cont
+										ul
+											li.newmenu_element
+												a(href="#") Подбор изготовление очков
+											li.newmenu_element
+												a(href="#") Подбор и виды контактных линз
+											li.newmenu_element
+												a(href="#") Ремонт и сервисное обслуживание очков
+					.menu_el
+						.menu_inner.action
+							a(href="#") Акции
+					.menu_el
+						.menu_inner
+							a(href="#") Адреса салонов
+					.header_top_socserv
+						noindex
+							a(href="#") INSTAGRAM
+							a(href="#") ВКОНТАКТЕ
+							a(href="#") FACEBOOK
 		//End header
 		//Begin content
 		section
@@ -177,31 +255,32 @@ html(lang="ru")
 						.filter_button Фильтр
 							span.icon-plus
 						.filter_content
-							.tabs-section
-								span Показать:
-								span.tb.active(data-for='all') Все
-								span.tb(data-for='opravy') Оправы
-								span.tb(data-for='linzy') Линзы
-								span.tb(data-for='ochki') Очки
-								span.tb(data-for='other') Другое
-							.tabs-sort
-								.ui.dropdown.selection
-									input(type='hidden' name='sort')
-									.default.text Распродажа
-									i.dropdown.icon
-									.menu
-										.item(data-value="PRICE_SALE") Распродажа
-										.item(data-value="PRICE_ASC" selected="selected") Цена, по возрастанию
-										.item(data-value="PRICE_DESC") Цена, по убыванию
-										.item(data-value="MAKER_GL_ASC") Популярное
-										.item(data-value="DATE_CREATED") Новизне, сначала новые
-							.tabs-price
-								span стоимость
-								span.rub
-									input(name='arrFilter_before' value="37469")
-								span -
-								span.rub
-									input(name='arrFilter_after' value="347469")
+							.row
+								.tabs-section.col-xs-12.col-sm-8.col-lg-6
+									span Показать:
+									span.tb.active(data-for='all') Все
+									span.tb(data-for='opravy') Оправы
+									span.tb(data-for='linzy') Линзы
+									span.tb(data-for='ochki') Очки
+									span.tb(data-for='other') Другое
+								.tabs-sort.col-xs-12.col-sm-4.col-lg-3
+									.ui.dropdown.selection
+										input(type='hidden' name='sort')
+										.default.text Распродажа
+										i.dropdown.icon
+										.menu
+											.item(data-value="PRICE_SALE") Распродажа
+											.item(data-value="PRICE_ASC" selected="selected") Цена, по возрастанию
+											.item(data-value="PRICE_DESC") Цена, по убыванию
+											.item(data-value="MAKER_GL_ASC") Популярное
+											.item(data-value="DATE_CREATED") Новизне, сначала новые
+								.tabs-price.col-xs-12.col-sm-12.col-lg-3
+									span стоимость
+									span.rub
+										input(name='arrFilter_before' value="37469")
+									span -
+									span.rub
+										input(name='arrFilter_after' value="347469")
 				.catalog_blocks
 					.sale.active.block_bb
 						.row
@@ -403,10 +482,15 @@ html(lang="ru")
 							p.adv_oth Очки любой сложности
 			.interactive_block
 				.interactive_elem
-					.item
+					.item.cert
 						a(href="#")
 							img(src="./img/cert.jpg")
-					.item
+							//.cert__element
+							//	.col-sm-6
+							//	.col-sm-6
+							//		.title Подарочные сертификаты
+							//		.button Перейти	
+					.item.video
 						img(src="./img/video.jpg")
 			.advantages_on_main.brands_on_main
 				.advantages
@@ -430,26 +514,26 @@ html(lang="ru")
 							img(src='./img/best_partners2.png')
 			.news-main
 				.news__block
-					.news__title.col-sm-4 Новости и статьи:
-					.news__link.col-sm-8
+					.news__title.col-md-4.col-sm-6 Новости и статьи:
+					.news__link.col-md-8.col-sm-6
 						a(href="#") Смотреть все новости
 					.news__elements.col-xs-12
 						.row
-							.col-xs-12.col-sm-4
+							.col-xs-12.col-md-4.col-sm-6
 								.col-news
 									a(href="#")
 										img(src="./img/news1.jpg")
 									a.name(href="#") Почему вам необходимы вторые очки?
 									.preview 
 										|Специалисты в области оптики постоянно твердят о необходимости вторых очков, которые могут быть и просто запасными, и несколько отличаться по функционалу.
-							.col-xs-12.col-sm-4
+							.col-xs-12.col-md-4.col-sm-6
 								.col-news
 									a(href="#")
 										img(src="./img/news2.jpg")
 									a.name(href="#") Модные солнцезащитные очки 2017
 									.preview 
 										|Солнце все чаще радует нас своими яркими лучами, приближая лето. Пора задуматься о покупке солнцезащитных очков и узнать какие модели в тренде весной-летом 2017 года!
-							.col-xs-12.col-sm-4
+							.col-xs-12.col-md-4.col-sm-6
 								.col-news
 									a(href="#")
 										img(src="./img/news3.jpg")

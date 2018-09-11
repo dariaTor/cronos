@@ -4,25 +4,27 @@ TopMenu = function(){
 }
 var timerResize = false, ignoreResize = [];
 $(function(){
-	TopMenu();
-	$(window).resize(function() {
-		if(!ignoreResize.length){
-			if(timerResize){
-				clearTimeout(timerResize);
-				timerResize = false;
+	if($(window).width() > 1140){
+		TopMenu();
+		$(window).resize(function() {
+			if(!ignoreResize.length){
+				if(timerResize){
+					clearTimeout(timerResize);
+					timerResize = false;
+				}
+				timerResize = setTimeout(function(){
+					try{
+						ignoreResize.push(true);
+						TopMenu();
+					}
+					catch(e){}
+					finally{
+						ignoreResize.pop();
+					}
+				}, 200);
 			}
-			timerResize = setTimeout(function(){
-				try{
-					ignoreResize.push(true);
-					TopMenu();
-				}
-				catch(e){}
-				finally{
-					ignoreResize.pop();
-				}
-			}, 200);
-		}
-	});
+		});
+	}
 	$('.ui.dropdown')
 	.dropdown()
 	.transition('slide down');
@@ -30,7 +32,7 @@ $(function(){
 });
 
 $(document).ready(function(){
-	$('.header_bottom_menu').find('.list_inner').each(function(){
+	$('.header_menu_desktop').find('.list_inner').each(function(){
 		$(this).hover(
 			function(){
 				$('.header__element').css('position', 'unset');
@@ -47,6 +49,40 @@ $(document).ready(function(){
 				$('.modal').css('opacity', '0');
 			}
 		);
+	});
+	$('.header-menu-mobile').on('click',function(){
+		var th_menu = $(this);
+		if(th_menu.hasClass('close')){
+			$('.header_bottom_logo').css('opacity', '1');
+			th_menu.removeClass('close');
+			$('.header_menu_mobile').removeClass('open');
+			$('.modal').hide();
+			$('.modal').css('opacity', '0');
+		}else{
+			$('.header_bottom_logo').css('opacity', '0');
+			th_menu.addClass('close');
+			$('.header_menu_mobile').addClass('open');
+			$('.modal').show();
+			$('.modal').css('opacity', '0.52');
+		}
+		$('.modal').on('click',function(){
+			$('.header_bottom_logo').css('opacity', '1');
+			th_menu.removeClass('close');
+			$('.header_menu_mobile').removeClass('open');
+			$('.modal').hide();
+			$('.modal').css('opacity', '0');
+		});
+	});
+	$('.header_menu_mobile').find('.list_inner').each(function(){
+		$(this).on('click', function(){
+				if($(this).hasClass('active')){
+					$(this).removeClass('active');
+					$(this).find('.menu_content').slideUp('fast');
+				}else{
+					$(this).addClass('active');
+					$(this).find('.menu_content').slideDown('fast');
+				}
+		});
 	});
 	$('.header_search').on("click", function(){
 		console.log('tut1');
