@@ -17,214 +17,26 @@ html(lang="ru")
 		script(type="text/javascript" src="./js/transition.min.js")
 		script(type="text/javascript" src="./js/main.js")
 	body
-		//Begin header
-		header
-			.header_top
-				.header_top_back
-					.header_top_socserv
-						noindex
-							a(href="#") INSTAGRAM
-							a(href="#") ВКОНТАКТЕ
-							a(href="#") FACEBOOK
-					.header_top_city
-						a(href="#") Нижний Новгород
-					.header_top_phone
-						a(href="tel:88002341199") 8 800 234 11 99
-					.header_top_text
-						p Звонок по России - бесплатный
-					.header_top_record
-						a(href="#") Записаться ко врачу
-			.header_bottom
-				.header-menu-mobile.mb
-				.header_bottom_logo.mb
-					img(src="./img/logo.png")
-				.header__element.mb
-					.header_menu_desktop
-						.menu_el
-							.menu_inner.list_inner
-								a.link(href="#") Компания
-								.menu_content
-									.menu_contentb
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") О компании
-												li.newmenu_element
-													a(href="#") Новости и блог
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Карьера
-												li.newmenu_element
-													a(href="#") Миссия и ценности
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Арендодателям
-												li.newmenu_element
-													a(href="#") Контакты
-						.menu_el
-							.menu_inner.list_inner
-								a.link(href="#") Интернет-магазин
-								.menu_content
-									.menu_contentb
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Контактные линзы
-												li.newmenu_element
-													a(href="#") Медицинские оправы и очки
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Солнцезащитные очки
-												li.newmenu_element
-													a(href="#") Подарочные сертификаты
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Сопутствующие товары
-												li.newmenu_element
-													a(href="#") Оплата и доставка интернет-магазина
-						.menu_el
-							.menu_inner.list_inner
-								a.link(href="#") Услуги
-								.menu_content
-									.menu_contentb
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Проверка зрения
-												li.newmenu_element
-													a(href="#") Детский врач и кабинет охраны зрения
-												li.newmenu_element
-													a(href="#") Цены на услуги
-												li.newmenu_element
-													a(href="#") Отзывы
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Подбор изготовление очков
-												li.newmenu_element
-													a(href="#") Подбор и виды контактных линз
-												li.newmenu_element
-													a(href="#") Ремонт и сервисное обслуживание очков
-						.menu_el
-							.menu_inner
-								a(href="#") Акции
-						.menu_el
-							.menu_inner
-								a(href="#") Адреса салонов
-						.header_search
-							a(href="#")
-								img(src="./img/search.png")
-						form.search-menu-block(action="" method="get")
-							.row
-								#title-search.col-sm-8.col-md-9
-									input.search-input(placeholder="Введите ваш запрос" type="text" size="15" maxlength="50")
-								.col-sm-4.col-md-3
-									.btn-block
-										button(type="submit") Найти
-										.close-search-btn
-											img(src="./img/close.png")
-				.header_bottom_icons.mb
-						.header_user
-							a(href="#")
-								img(src="./img/user.png")
-						.header_like
-							a(href="#")
-								img(src="./img/like.png")
-								.count (40)
-						.header_basket
-							a(href="#")
-								img(src="./img/basket.png")
-								.count (12)
-				.header_menu_mobile
-					.menu_el
-						.menu_inner.list_inner
-							a.link(href="#") Компания
-							.menu_content
-								.menu_contentb
-									.upmenu_cont
-										ul
-											li.newmenu_element
-												a(href="#") О компании
-											li.newmenu_element
-												a(href="#") Новости и блог
-									.upmenu_cont
-										ul
-											li.newmenu_element
-												a(href="#") Карьера
-											li.newmenu_element
-												a(href="#") Миссия и ценности
-									.upmenu_cont
-										ul
-											li.newmenu_element
-												a(href="#") Арендодателям
-											li.newmenu_element
-												a(href="#") Контакты
-					.menu_el
-						.menu_inner.list_inner
-								a.link(href="#") Интернет-магазин
-								.menu_content
-									.menu_contentb
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Контактные линзы
-												li.newmenu_element
-													a(href="#") Медицинские оправы и очки
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Солнцезащитные очки
-												li.newmenu_element
-													a(href="#") Подарочные сертификаты
-										.upmenu_cont
-											ul
-												li.newmenu_element
-													a(href="#") Сопутствующие товары
-												li.newmenu_element
-													a(href="#") Оплата и доставка интернет-магазина
-					.menu_el
-						.menu_inner.list_inner
-							a.link(href="#") Услуги
-							.menu_content
-								.menu_contentb
-									.upmenu_cont
-										ul
-											li.newmenu_element
-												a(href="#") Проверка зрения
-											li.newmenu_element
-												a(href="#") Детский врач и кабинет охраны зрения
-											li.newmenu_element
-												a(href="#") Цены на услуги
-											li.newmenu_element
-												a(href="#") Отзывы
-									.upmenu_cont
-										ul
-											li.newmenu_element
-												a(href="#") Подбор изготовление очков
-											li.newmenu_element
-												a(href="#") Подбор и виды контактных линз
-											li.newmenu_element
-												a(href="#") Ремонт и сервисное обслуживание очков
-					.menu_el
-						.menu_inner.action
-							a(href="#") Акции
-					.menu_el
-						.menu_inner
-							a(href="#") Адреса салонов
-					.header_top_socserv
-						noindex
-							a(href="#") INSTAGRAM
-							a(href="#") ВКОНТАКТЕ
-							a(href="#") FACEBOOK
-		//End header
+		include header
 		//Begin content
 		section
 			.content
 				.menu_and_banner
+					.left_menu__mobile
+						.row
+							.col-xs-6
+								div
+									a(href="#")
+										span.linz Линзы
+							.col-xs-6
+								div
+									a(href="#")
+										span.opravi Оправы
+						.row
+							.col-xs-12
+								div
+									a(href="#")
+										span.ochki Солнечные очки
 					.left_menu
 						.left_menu_catalog
 							p
@@ -243,7 +55,8 @@ html(lang="ru")
 							a(href="#") Подбор и виды контактных линз
 							a(href="#") Ремонт и сервисное обслуживание очков
 					.main_banner
-						img(src="./img/banner_2.jpg")
+						img.desktop-banner(src="./img/banner_2.jpg")
+						img.mobile-banner(src="./img/banner_mobile.jpg")
 			.offer_on_main
 				.offer_blocks
 					.p_blocks
@@ -285,7 +98,7 @@ html(lang="ru")
 					.sale.active.block_bb
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -312,7 +125,7 @@ html(lang="ru")
 													span Проверить наличие товара
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -343,7 +156,7 @@ html(lang="ru")
 					.hit.block_bb
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -370,7 +183,7 @@ html(lang="ru")
 													span Проверить наличие товара
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -401,7 +214,7 @@ html(lang="ru")
 					.new.block_bb
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -428,7 +241,7 @@ html(lang="ru")
 													span Проверить наличие товара
 						.row
 							- for (var x = 0; x < 4; x++)
-								.col-sm-4.col-md-3.col-xs-12.product
+								.col-sm-4.col-md-3.col-xs-6.product
 									.product_item
 										.row
 											.col-xs-12.col-sm-12.col-image
@@ -541,87 +354,5 @@ html(lang="ru")
 									.preview 
 										|Очки уже давно перестали быть просто средством коррекции зрения. Сегодня это стильный аксессуар, с помощью которого можно скорректировать форму лица и эффектно дополнить образ.
 		//End content
-		//Begin footer
-		footer
-			.footer__content
-				.row
-					.col-md-3.col-sm-3.col-xs-12
-						a.logo_min(href="#")
-							img(src="./img/logo_footer.png")
-							span ООО «Кронос»
-						.callCenter Прием заказов: круглосуточно<br><br>Обработка заказов: <br>с 09:00 до 20:00 по будням<br>с 10:00 до 18:00 по выходным.
-						.companyInformation
-							table.infonmUnit
-								tbody
-									tr
-										td Телефон:
-										td
-											a.noUnderline(href="tel:+78002341199") +7 800 234 11 99,
-									tr
-										td 	факс:
-										td
-											a.noUnderline(href="tel:+78314288584") +7 831 428 85 84
-					.col-md-3.col-sm-3.col-xs-6.text-left
-						ul.footerMenu
-							li
-								a(href="#") Контактные линзы
-							li
-								a(href="#") Медицинские оправы и очки
-							li
-								a(href="#") Солнцезащитные очки
-							li
-								a(href="#") Наблюдательная оптика
-							li
-								a(href="#") Подарочные сертификаты
-							li
-								a(href="#") Сопутствующие товары
-							li
-								a(href="#") Оплата и доставка интернет-магазина
-					.col-md-4.col-sm-4.col-xs-6.text-left
-						ul.footerMenu
-							li
-								a(href="#") Проверка зрения
-							li
-								a(href="#") Детский врач и кабинет охраны зрения
-							li
-								a(href="#") Цены на услуги
-							li
-								a(href="#") Отзывы
-							li
-								a(href="#") Подбор и изготовление очков
-							li
-								a(href="#") Подбор и виды контактных линз
-							li
-								a(href="#") Ремонт и сервисное обслуживание очков
-					.col-md-2.col-sm-2.col-xs-12.text-left
-						ul.footerMenu
-							li
-								a(href="#") О компании
-							li
-								a(href="#") Новости и блог
-							li
-								a(href="#") Карьера
-							li
-								a(href="#") Арендодателям
-							li
-								a(href="#") Контакты
-						.soclinks
-							a(href="#") Instagram
-							a(href="#") Вконтакте
-							a(href="#") Facebook
-				.row
-					.col-md-3.col-sm-3.col-xs-12
-						p.infonmUnit
-								a(href="mailto:ishop@cronos.pro") ishop@cronos.pro
-					.col-md-9.col-sm-9.col-xs-12
-						.halva_logo
-							.lineColum Мы принимаем:
-							.imageColum
-								a(href="#")
-									img(src="./img/halva_logo.jpg")
-								a(href="#")
-									img(src="./img/sovest_logo.jpg")
-								a(href="#")
-									img(src="./img/viza_logo.png")
-		//End footer
+		include footer
 		.modal

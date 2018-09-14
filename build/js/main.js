@@ -25,6 +25,9 @@ $(function(){
 			}
 		});
 	}
+	if($(window).width() < 767){
+		$(document).find('.p_blocks').find('li.hit').text('Хиты');
+	}
 	$('.ui.dropdown')
 	.dropdown()
 	.transition('slide down');
@@ -50,7 +53,7 @@ $(document).ready(function(){
 			}
 		);
 	});
-	$('.header-menu-mobile').on('click',function(){
+	$('.header__burger').on('click',function(){
 		var th_menu = $(this);
 		if(th_menu.hasClass('close')){
 			$('.header_bottom_logo').css('opacity', '1');
