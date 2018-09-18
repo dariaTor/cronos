@@ -3,19 +3,35 @@
 		display: none;
 	}
 	.header__top{
-		padding: 15px 20px 12px;
+		padding: 15px 0 0;
 		.header__top__back{
-			.header__top__phone,.header__top__text{
+			.header__top__text{
 				display: none;
 			}
+			.header__top__phone{
+				padding-right: 20px;
+				padding-bottom: 14px;
+				margin: 0;
+				width: 50%;
+				text-align: right;
+			}
 			.header__top__city{
-				margin: 0 14px 0 0;
+				padding-left: 20px;
+				padding-bottom: 14px;
+				margin: 0;
+				width: 50%;
+				float: left;
 				a{
 					font-size: 12px;
 				}
 			}
 			.header__top__record{
+				padding: 14px 0;
 				margin: 0;
+				display: block;
+			    float: none;
+			    text-align: center;
+			    background: #f6f6f6;
 				a{
 					font-size: 12px;
 				}
@@ -26,6 +42,18 @@
 		margin: 0;
 		div{
 			display: none;
+		}
+	}
+	.ver__mob.mb_open{
+		.header_bottom_logo{
+			display: none;
+		}
+		.header_bottom_icons{
+			width: 100%;
+    		text-align: right;
+			.mb_mop{
+				display: inline-block;
+			}
 		}
 	}
 	.ver__mob{
@@ -69,19 +97,17 @@
 		}
 		.header_menu_mobile.open{
 			display: block;
-			top: 99px;
+			top: 86px;
 			.header__top__phone,.header__top__socserv{
 				padding: 0 20px;
 			}
 		}
 	}
 	.left_menu__mobile{
+		text-align: left;
 		margin: 0 20px 20px;
-		.row{
-			overflow: auto;
-		}
-		.col-xs-6 div{
-			margin-bottom: 32px;
+		div{
+			margin-bottom: 20px;
 		}
 		span::before{
 			content: "";
@@ -120,9 +146,6 @@
 		.filter_content{
 			.tabs-section span.tb{
 				margin: 5px;
-			}
-			.tabs-sort{
-				margin: 20px 0;
 			}
 		}
 		.catalog_blocks{
@@ -247,9 +270,6 @@
 					margin: 0 27px;
 				}
 			}
-			.header__top__phone a{
-				font-size: 14px;
-			}
 			.header__top__record{
 				a{
 					letter-spacing: 0;
@@ -310,9 +330,6 @@
 		margin: 0 20px;
 	}
 	.offer_on_main{
-		.tabs-price{
-			margin: 20px 0;
-		}
 		.filter_content{
 			span.tb{
 				font-size: 12px;
@@ -371,6 +388,9 @@
 		.header__top__back{
 			.header__top__socserv{
 				display: none;
+			}
+			.header__top__phone a{
+				font-size: 14px;
 			}
 		}
 	}
@@ -457,6 +477,15 @@
 			float: unset;
 			width: 100%;
    			text-align: center;
+		}
+	}
+	.filter_content{
+		margin: 20px 0;
+		overflow: hidden;
+		.tabs-price{
+			margin: 32px 0 0;
+			text-align: left;
+			padding: 0 15px;
 		}
 	}
 	.left_menu{

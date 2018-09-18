@@ -23,20 +23,15 @@ html(lang="ru")
 			.content
 				.menu_and_banner
 					.left_menu__mobile
-						.row
-							.col-xs-6
-								div
-									a(href="#")
-										span.linz Линзы
-							.col-xs-6
-								div
-									a(href="#")
-										span.opravi Оправы
-						.row
-							.col-xs-12
-								div
-									a(href="#")
-										span.ochki Солнечные очки
+						div
+							a(href="#")
+								span.linz Линзы
+						div
+							a(href="#")
+								span.opravi Оправы
+						div
+							a(href="#")
+								span.ochki Солнечные очки
 					.left_menu
 						.left_menu_catalog
 							p
@@ -69,17 +64,10 @@ html(lang="ru")
 							span.icon-plus
 						.filter_content
 							.row
-								.tabs-section.col-xs-12.col-sm-8.col-lg-6
-									span Показать:
-									span.tb.active(data-for='all') Все
-									span.tb(data-for='opravy') Оправы
-									span.tb(data-for='linzy') Линзы
-									span.tb(data-for='ochki') Очки
-									span.tb(data-for='other') Другое
-								.tabs-sort.col-xs-12.col-sm-4.col-lg-3
+								.tabs-sort.col-xs-12.col-sm-12.col-lg-12
 									.ui.dropdown.selection
 										input(type='hidden' name='sort')
-										.default.text Распродажа
+										.default.text Цена, по возрастанию
 										i.dropdown.icon
 										.menu
 											.item(data-value="PRICE_SALE") Распродажа
@@ -87,8 +75,15 @@ html(lang="ru")
 											.item(data-value="PRICE_DESC") Цена, по убыванию
 											.item(data-value="MAKER_GL_ASC") Популярное
 											.item(data-value="DATE_CREATED") Новизне, сначала новые
-								.tabs-price.col-xs-12.col-sm-12.col-lg-3
-									span стоимость
+								.tabs-section.col-xs-12.col-sm-12.col-lg-8
+									span Показать:
+									span.tb.active(data-for='all') Все
+									span.tb(data-for='opravy') Медицинские оправы
+									span.tb(data-for='linzy') Контактные линзы
+									span.tb(data-for='ochki') Солнцезащитные очки
+									span.tb(data-for='other') Другое
+								.tabs-price.col-xs-12.col-sm-12.col-lg-4
+									span СТОИМОСТЬ
 									span.rub
 										input(name='arrFilter_before' value="37469")
 									span -

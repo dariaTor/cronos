@@ -1,0 +1,12 @@
+/*Классы p*/
+p	font-size 18px;
+	line-height: 24px;
+	Regular
+p.main_p	font-size 24px;
+			line-height: 32px;
+			Semibold
+/*Классы Кнопок*/
+bnt__base	background: #00aba4;
+			color: #fffefe;
+			font-size: 16px;
+			span 	text-transform: uppercase;

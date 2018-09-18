@@ -57,7 +57,7 @@
                     <div class="upmenu_cont">
                       <ul>
                         <li class="newmenu_element"><a href="#">Арендодателям</a></li>
-                        <li class="newmenu_element"><a href="/contacts.html">Контакты</a></li>
+                        <li class="newmenu_element"><a href="../contacts.html">Контакты</a></li>
                       </ul>
                     </div>
                   </div>
@@ -234,6 +234,9 @@
         <div class="header_bottom_logo"><img src="./img/logo_mini.png"></div>
         <div class="header_bottom_icons">
           <div class="header_search"><a href="#"><img src="./img/search.png"></a></div>
+          <div class="header_user mb_mop"><a href="#"><img src="./img/user.png"></a></div>
+          <div class="header_like mb_mop"><a href="#"><img src="./img/like.png">
+              <div class="count">(40)			</div></a></div>
           <div class="header_basket"><a href="#"><img src="./img/basket.png">
               <div class="count">(12)</div></a></div>
           <form class="search-menu-block" action="" method="get">
@@ -345,19 +348,9 @@
       <div class="content">
         <div class="menu_and_banner">
           <div class="left_menu__mobile">
-            <div class="row">
-              <div class="col-xs-6">
-                <div><a href="#"><span class="linz">Линзы</span></a></div>
-              </div>
-              <div class="col-xs-6">
-                <div><a href="#"><span class="opravi">Оправы</span></a></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div><a href="#"><span class="ochki">Солнечные очки</span></a></div>
-              </div>
-            </div>
+            <div><a href="#"><span class="linz">Линзы</span></a></div>
+            <div><a href="#"><span class="opravi">Оправы</span></a></div>
+            <div><a href="#"><span class="ochki">Солнечные очки</span></a></div>
           </div>
           <div class="left_menu">
             <div class="left_menu_catalog">
@@ -383,11 +376,10 @@
             <div class="filter_button">Фильтр<span class="icon-plus"></span></div>
             <div class="filter_content">
               <div class="row">
-                <div class="tabs-section col-xs-12 col-sm-8 col-lg-6"><span>Показать:</span><span class="tb active" data-for="all">Все</span><span class="tb" data-for="opravy">Оправы</span><span class="tb" data-for="linzy">Линзы</span><span class="tb" data-for="ochki">Очки</span><span class="tb" data-for="other">Другое</span></div>
-                <div class="tabs-sort col-xs-12 col-sm-4 col-lg-3">
+                <div class="tabs-sort col-xs-12 col-sm-12 col-lg-12">
                   <div class="ui dropdown selection">
                     <input type="hidden" name="sort">
-                    <div class="default text">Распродажа</div><i class="dropdown icon"></i>
+                    <div class="default text">Цена, по возрастанию</div><i class="dropdown icon"></i>
                     <div class="menu">
                       <div class="item" data-value="PRICE_SALE">Распродажа</div>
                       <div class="item" data-value="PRICE_ASC" selected="selected">Цена, по возрастанию</div>
@@ -397,7 +389,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="tabs-price col-xs-12 col-sm-12 col-lg-3"><span>стоимость</span><span class="rub">
+                <div class="tabs-section col-xs-12 col-sm-12 col-lg-8"><span>Показать:</span><span class="tb active" data-for="all">Все</span><span class="tb" data-for="opravy">Медицинские оправы</span><span class="tb" data-for="linzy">Контактные линзы</span><span class="tb" data-for="ochki">Солнцезащитные очки</span><span class="tb" data-for="other">Другое</span></div>
+                <div class="tabs-price col-xs-12 col-sm-12 col-lg-4"><span>СТОИМОСТЬ</span><span class="rub">
                     <input name="arrFilter_before" value="37469"></span><span>-</span><span class="rub">
                     <input name="arrFilter_after" value="347469"></span></div>
               </div>

@@ -226,6 +226,9 @@ header{
 			margin: 0 10px 4px;
 			display: inline-block;
 		}
+		.mb_mop{
+			display: none;
+		}
 		img{
 		}
 		a{
@@ -622,7 +625,7 @@ section{
 		}
 		span.tb{
 			text-transform: unset;
-		    padding: 3px 11px;
+		    padding: 6px 11px;
 		    margin: 0 5px;
 		    border: 1px solid #a1a7ac;
 		}
@@ -638,6 +641,7 @@ section{
 			color: #212121;
 		}
 		.ui.selection.dropdown{
+			margin-bottom: 32px;
 			padding-top: 7px;
 			padding-bottom: 6px;
 			min-height: auto;
@@ -669,6 +673,8 @@ section{
 	}
 	.tabs-price{
 		display: inline-block;
+		padding: 4px 0;
+		text-align: right;
 		input{
 			width: 82px;
 			border: 1px solid #a1a7ac;
@@ -911,6 +917,48 @@ footer{
 			img{
 				border-radius: 3px;
 			}
+		}
+	}
+}
+.page_const{
+	a, a:active{
+		color: #00aba4;
+	}
+	p{
+		font-size: 18px;
+		line-height: 24px;
+		padding-bottom: 33px;
+	}
+	p.main_p{
+		font-size: 24px;
+		font-weight: bold;
+		padding-bottom: 13px;
+		line-height: 32px;
+	}
+	.bnt__base{
+		max-width: 285px;
+		display: block;
+		background: #00aba4;
+		color: #fffefe;
+		font-size: 16px;
+		span{
+			text-transform: uppercase;
+		}
+	}
+	.btn__salon{
+		padding: 30px;
+		span{
+			padding: 0 0 0 50px;
+			position: relative;
+			display: block;
+		}
+		span::before{
+			content: "";
+			background: url(../img/icon-map.png);
+			width: 25px;
+			height: 32px;
+			position: absolute;
+			left: 0;
 		}
 	}
 }
