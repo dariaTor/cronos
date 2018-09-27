@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="./styles/test.css")
+		link(rel="stylesheet" type="text/css" href="./styles/media.css")
+		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
+		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
+		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.theme.default.min.css")
+		script(type="text/javascript" src="./js/jquery.min.js")
+		script(type="text/javascript" src="./js/owl.carousel.min.js")
+		script(type="text/javascript" src="./js/dropdown.min.js")
+		script(type="text/javascript" src="./js/transition.min.js")
+		script(type="text/javascript" src="./js/main.js")
+	body
+		include header
+		//Begin content
+		section
+			.content
+				.pagePath
+					div
+						a(href="/") Главная
+						span  / 
+						|Новости
+				.page_const
+					h1 Новости
+					.news-list
+						- for (var x = 0; x < 4; x++)
+							.text_post.newslist-item
+								.row.row-flex
+									.col-sm-6.col-xs-12
+										a(href="#")
+											img.hidden-xs(src='./img/news-image.png')
+											.visible-xs.visible-sm.blog-image-xs(style="background-image:url(./img/news-image.png)")
+									.col-sm-6.col-xs-12
+										.newslist-item-right
+											.date 06.08.2018
+											.link
+												a.title_a(href="#") Очки Le Specs — австралийская мода, покорившая Европу и Америку
+											.text
+												div Кому как не австралийцам знать толк в самых крутых солнечных очках? Бренд Le Specs, завоевавший мировую славу в 1980-х, триумфально вернулся в 2006 году вместе с новой коллекцией солнцезащитных очков. Этот бренд всегда был близок уличной моде и жизни у океана!
+											a.news-item-more(href="#") Подробнее
+						.paginate.show_more_positions
+							a(href="#") Показать ещё
+								span.icon-plus
+		//End content
+		include footer
+		.modal

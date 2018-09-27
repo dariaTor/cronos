@@ -256,6 +256,26 @@
 			color: #fff;
 		}
 	}
+	.page_const{
+		a.bold_a,p{
+			font-size: 16px;
+		}
+		p.main_p{
+			font-size: 18px;
+		}
+		a.grey_a{
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 50px;
+			display: block;
+		}
+	}
+	.page_const,.pagePath{
+		padding: 0 20px;
+	}
+	.visible-xs{
+		display: block;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1139px){
 	.header__top{
@@ -359,6 +379,9 @@
 	}
 	footer{
 		font-size: 12px;
+	}
+	.visible-sm{
+		display: block;
 	}
 }
 @media screen and (min-width: 768px){
@@ -488,7 +511,7 @@
 			padding: 0 15px;
 		}
 	}
-	.left_menu{
+	.left_menu,.hidden-xs{
 		display: none;
 	}
 	.offer_on_main{
@@ -497,7 +520,7 @@
 	}
 }
 @media screen and (min-width: 1140px){
-	.header_bottom .header__burger,.header_bottom .header_block_mobile,.header_bottom .header_menu_mobile{
+	.header_bottom .header__burger,.header_bottom .header_block_mobile,.header_bottom .header_menu_mobile,.visible-xs,.visible-sm{
 		display: none;
 	}
 	.header_bottom div {

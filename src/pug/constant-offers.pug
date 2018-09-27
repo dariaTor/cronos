@@ -1,0 +1,51 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="./styles/test.css")
+		link(rel="stylesheet" type="text/css" href="./styles/media.css")
+		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
+		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
+		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.theme.default.min.css")
+		script(type="text/javascript" src="./js/jquery.min.js")
+		script(type="text/javascript" src="./js/owl.carousel.min.js")
+		script(type="text/javascript" src="./js/dropdown.min.js")
+		script(type="text/javascript" src="./js/transition.min.js")
+		script(type="text/javascript" src="./js/main.js")
+	body
+		include header
+		//Begin content
+		section
+			.content
+				.pagePath
+					div
+						a(href="/") Главная
+						span  / 
+						|Постоянные предложения
+				.page_const
+					.row.row-flex
+						.col-md-6.col-sm-6.col-xs-12
+							h1 Постоянные предложения
+						.col-md-6.col-sm-6.col-xs-12
+							a.grey_a(href="./action.html") Акции
+					.row.row-flex.action__row
+						- for (var x = 0; x < 4; x++)
+							.col-md-3.col-sm-6.action__element
+								img(src="./img/no-photo-offers.jpg")
+								a.title_a(href="#") Бесплатная проверка зрения при заказе
+							.col-md-3.col-sm-6.action__element
+								img(src="./img/no-photo-offers.jpg")
+								a.title_a(href="#") Бесплатная проверка зрения при заказе
+						.col-md-3.col-sm-6.action__element
+								img(src="./img/no-photo-offers.jpg")
+								a.title_a(href="#") Бесплатная проверка зрения при заказе
+						.col-md-3.col-sm-6.action__element
+								img(src="./img/no-photo-offers.jpg")
+								a.title_a(href="#") Бесплатная проверка зрения при заказе
+		//End content
+		include footer
+		.modal

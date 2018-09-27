@@ -10,3 +10,29 @@ bnt__base	background: #00aba4;
 			color: #fffefe;
 			font-size: 16px;
 			span 	text-transform: uppercase;
+btn__salon	padding: 30px;
+			span{
+				padding: 0 0 0 50px;
+				position: relative;
+				display: block;
+				}
+			span::before{
+				content: "";
+				background: url(../img/icon-map.png);
+				width: 25px;
+				height: 32px;
+				position: absolute;
+				left: 0;
+			}
+/*Классы для а*/
+a.bold_a
+a.grey_a 	display: inline;
+    		border-bottom: 1px dotted #959595;
+    		color: #959595;
+    		font-size: 18px;
+    		font-weight: 700;
+    		line-height: 34px;
+		:hover{
+			color: #d4d3d3;
+			border-bottom: 1px dotted #d4d3d3;
+		}
