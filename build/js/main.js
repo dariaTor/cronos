@@ -174,4 +174,30 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	$('.multifilter__elem').click(function () {
+        var _this=$(this);
+        var _this_parent=_this.parent();
+        if(_this_parent.hasClass('open')){
+            _this_parent.removeClass('open');
+        }else{
+            $('.multifilter__elem').parent().removeClass('open');
+            _this_parent.addClass('open');
+        }
+    });
+    $('.multifilter__list>div').click(function () {
+        var _this=$(this);
+        if(_this.hasClass('disabled'))return;
+        _this.toggleClass('active');
+        recount();
+    });
+    function recount() {
+	    $('.filter_noselect .multifilter').each(function (i, ii) {
+	        var _li = $(ii);
+	        if (_li.find('.multifilter__list>div.active').length) {
+	            _li.addClass('hasChange');
+	        } else {
+	            _li.removeClass('hasChange');
+	        }
+	    });
+	}
 });

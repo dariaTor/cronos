@@ -37,8 +37,7 @@ html(lang="ru")
 						h1 Солнцезащитные очки
 						.filter_content
 							.tabs-sort
-								.ui.dropdown.selection
-									input(type='hidden' name='sort')
+								.ui.dropdown.selection.sort
 									.default.text Цена, по возрастанию
 									i.dropdown.icon
 									.menu
@@ -48,34 +47,200 @@ html(lang="ru")
 										.item(data-value="MAKER_GL_ASC") Популярное
 										.item(data-value="DATE_CREATED") Новизне, сначала новые
 						.filter_noselect
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Пол
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Женские
+									div(data-id="1") Мужские
+									div(data-id="1") Унисекс
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Возраст
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Взрослые
+									div(data-id="1") Детские
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Материал
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Пластик
+									div(data-id="1") Металл
+									div(data-id="1") Комбинированные
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Бренд
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Ray-Ban
+									div(data-id="1") Vogue
+									div(data-id="1") Adidas
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Тип оправы
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Безободковая
+									div(data-id="1") Ободковая
+									div(data-id="1") Полуободковая
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Форма оправы
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Бабочка
+									div(data-id="1") Капли
+									div(data-id="1") Круглая
+							.multifilter
+								.multifilter__elem
+									span.mf_ttl Цвет
+									.arr_down_icon
+								.multifilter__list
+									div(data-id="1") Красный
+									div(data-id="1") Черный
+									div(data-id="1") Коричневый
+							div
+								a.bt.smart_filter(href="#") Сбросить фильтр		
 						.product_list
-							.row
-								- for (var x = 0; x < 4; x++)
-									.col-sm-4.col-md-3.col-xs-6.product
-										.product_item
-											.row
-												.col-xs-12.col-sm-12.col-image
-													.image
-														.like_icons
-															span 
-																i
-														.thumbnail.two_img
-															a(href="#")
-																img.thumb(src="./img/ray-ban.jpg")
-														.flaglist
-															.flag.sale Распродажа -40%
-												.col-xs-12.col-sm-12.col-descr
-													a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
-													.price_bl
-														span.act 4 000 руб. 
-														span.old 4 100 руб.
-												.col-xs-12.col-sm-12.col-buttons
-													.add_basket
-														span В корзину
-													.buy_one_click
-														span Купить в 1 клик
-													.info_stock
-														span Проверить наличие товара
+							.stroke_items
+								.row
+									- for (var x = 0; x < 4; x++)
+										.col-sm-4.col-md-3.col-xs-6.product
+											.product_item
+												.row
+													.col-xs-12.col-sm-12.col-image
+														.image
+															.like_icons
+																span 
+																	i
+															.thumbnail.two_img
+																a(href="#")
+																	img.thumb(src="./img/ray-ban.jpg")
+															.flaglist
+																.flag.sale Распродажа -40%
+													.col-xs-12.col-sm-12.col-descr
+														a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+														.price_bl
+															span.act 4 000 руб. 
+															span.old 4 100 руб.
+													.col-xs-12.col-sm-12.col-buttons
+														.add_basket
+															span В корзину
+														.buy_one_click
+															span Купить в 1 клик
+														.info_stock
+															span Проверить наличие товара
+								.row
+									- for (var x = 0; x < 4; x++)
+										.col-sm-4.col-md-3.col-xs-6.product
+											.product_item
+												.row
+													.col-xs-12.col-sm-12.col-image
+														.image
+															.like_icons
+																span 
+																	i
+															.thumbnail.two_img
+																a(href="#")
+																	img.thumb(src="./img/ray-ban.jpg")
+															.flaglist
+																.flag.sale Распродажа -40%
+													.col-xs-12.col-sm-12.col-descr
+														a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+														.price_bl
+															span.act 4 000 руб. 
+															span.old 4 100 руб.
+													.col-xs-12.col-sm-12.col-buttons
+														.add_basket
+															span В корзину
+														.buy_one_click
+															span Купить в 1 клик
+														.info_stock
+															span Проверить наличие товара
+								.row
+									- for (var x = 0; x < 4; x++)
+										.col-sm-4.col-md-3.col-xs-6.product
+											.product_item
+												.row
+													.col-xs-12.col-sm-12.col-image
+														.image
+															.like_icons
+																span 
+																	i
+															.thumbnail.two_img
+																a(href="#")
+																	img.thumb(src="./img/ray-ban.jpg")
+															.flaglist
+																.flag.sale Распродажа -40%
+													.col-xs-12.col-sm-12.col-descr
+														a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+														.price_bl
+															span.act 4 000 руб. 
+															span.old 4 100 руб.
+													.col-xs-12.col-sm-12.col-buttons
+														.add_basket
+															span В корзину
+														.buy_one_click
+															span Купить в 1 клик
+														.info_stock
+															span Проверить наличие товара
+									.row
+									- for (var x = 0; x < 4; x++)
+										.col-sm-4.col-md-3.col-xs-6.product
+											.product_item
+												.row
+													.col-xs-12.col-sm-12.col-image
+														.image
+															.like_icons
+																span 
+																	i
+															.thumbnail.two_img
+																a(href="#")
+																	img.thumb(src="./img/ray-ban.jpg")
+															.flaglist
+																.flag.sale Распродажа -40%
+													.col-xs-12.col-sm-12.col-descr
+														a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+														.price_bl
+															span.act 4 000 руб. 
+															span.old 4 100 руб.
+													.col-xs-12.col-sm-12.col-buttons
+														.add_basket
+															span В корзину
+														.buy_one_click
+															span Купить в 1 клик
+														.info_stock
+															span Проверить наличие товара
+								.paginate.show_more_positions
+									a(href="#") Показать ещё
+										span.icon-plus
+							.advantages
+								.adv_title Почему клиенты обращаются к нам:
+								.owl-carousel.owl-theme.owl-advantages
+									.item
+										img(src='./img/no-imag.png')
+										p.adv_main Высокоточное производство
+										p.adv_oth Очки любой сложности
+									.item
+										img(src='./img/no-imag.png')
+										p.adv_main Закажите<br/> в интернет-магазине
+										p.adv_oth Доставим по России
+									.item
+										img(src='./img/no-imag.png')
+										p.adv_main Близко к вашему дому и офису
+										p.adv_oth Получите заказ в любой оптике сети
+									.item
+										img(src='./img/no-imag.png')
+										p.adv_main Профессионалы<br/> в диагностике зрения
+										p.adv_oth Эксперты в прогрессивных и контактных линзах
+									.item
+										img(src='./img/no-imag.png')
+										p.adv_main Высокоточное производство
+										p.adv_oth Очки любой сложности
+							.st_discription В нашем интернет-магазине Вы увидите лишь часть коллекции солнцезащитных очков, которая представлена в «Оптике Кронос». Мы отобрали ряд наиболее интересных, с нашей точки зрения, брендов, для того, чтобы Вы смогли оценить разнообразие, которое ждет Вас в наших салонах, где можно найти мужские, женские, детские солнцезащитные очки новых коллекций на любой вкус и для самых взыскательных клиентов.
 		//End content
 		include footer
 		.modal
