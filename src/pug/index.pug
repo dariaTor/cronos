@@ -10,7 +10,6 @@ html(lang="ru")
 		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
-		link(rel="stylesheet" type="text/css" href="./styles/owl.theme.default.min.css")
 		script(type="text/javascript" src="./js/jquery.min.js")
 		script(type="text/javascript" src="./js/owl.carousel.min.js")
 		script(type="text/javascript" src="./js/dropdown.min.js")
@@ -31,7 +30,7 @@ html(lang="ru")
 								span.opravi Оправы
 						div
 							a(href="#")
-								span.ochki Солнечные очки
+								span.ochki Солнцезащитные очки
 					.left_menu
 						.left_menu_catalog
 							p
@@ -77,11 +76,16 @@ html(lang="ru")
 											.item(data-value="DATE_CREATED") Новизне, сначала новые
 								.tabs-section.col-xs-12.col-sm-12.col-lg-8
 									span Показать:
-									span.tb.active(data-for='all') Все
-									span.tb(data-for='opravy') Медицинские оправы
-									span.tb(data-for='linzy') Контактные линзы
-									span.tb(data-for='ochki') Солнцезащитные очки
-									span.tb(data-for='other') Другое
+									input.hidden(type="radio" id='all' name='all')
+									label.tb.active(for="all") Все
+									input.hidden(type="radio" id='opravy' name='opravy')
+									label.tb(for="opravy") Медицинские оправы
+									input.hidden(type="radio" id='linzy' name='linzy')
+									label.tb(for="linzy") Контактные линзы
+									input.hidden(type="radio" id='ochki' name='ochki')
+									label.tb(for="ochki") Солнцезащитные очки
+									input.hidden(type="radio" id='other' name='other')
+									label.tb(for="other") Другое
 								.tabs-price.col-xs-12.col-sm-12.col-lg-4
 									span СТОИМОСТЬ
 									span.rub

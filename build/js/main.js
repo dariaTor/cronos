@@ -4,6 +4,7 @@ TopMenu = function(){
 }
 var timerResize = false, ignoreResize = [];
 $(function(){
+	/*Динамическая ширина выпадающего меню в header*/
 	if($(window).width() > 1140){
 		TopMenu();
 		$(window).resize(function() {
@@ -25,16 +26,21 @@ $(function(){
 			}
 		});
 	}
+	/*Меняем на главной странице Хиты продаж на Хиты*/
 	if($(window).width() < 767){
 		$(document).find('.p_blocks').find('li.hit').text('Хиты');
 	}
+	/*Выпадающий список на главной и в разделах каталога, убрать если не понадобится*/
 	$('.ui.dropdown')
 	.dropdown()
 	.transition('slide down');
-	// $('.ui.dropdown').find('.menu').transition('slide up');
+	$('.ui.dropdown.sort')
+	.dropdown()
+	.transition('slide down');
 });
 
 $(document).ready(function(){
+	/*Выпадающее меню в header decktop*/
 	$('.header_menu_desktop').find('.list_inner').each(function(){
 		$(this).hover(
 			function(){
@@ -53,6 +59,7 @@ $(document).ready(function(){
 			}
 		);
 	});
+	/*Выпадающее меню в header tablet mobile*/
 	$('.header__burger').on('click',function(){
 		var th_menu = $(this);
 		if(th_menu.hasClass('close')){
@@ -79,6 +86,7 @@ $(document).ready(function(){
 			$('.modal').css('opacity', '0');
 		});
 	});
+	/*Выпадающее меню в header mobile*/
 	$('.header_menu_mobile').find('.list_inner').each(function(){
 		$(this).on('click', function(){
 				if($(this).hasClass('active')){
@@ -90,14 +98,14 @@ $(document).ready(function(){
 				}
 		});
 	});
+	/*Поиск в header*/
 	$('.header_search').on("click", function(){
-		console.log('tut1');
 		$('.search-menu-block').addClass('show');
 	});
 	$('.close-search-btn').on("click", function(){
-		console.log('tut2');
 		$('.search-menu-block').removeClass('show');
 	});
+	/*Блоки распродажа, хит продаж, новинки на главной*/
 	$('.offer_blocks').find('.sale').on('click', function(){
 		if(!$(this).hasClass('active')){
 			$('.offer_blocks').find('li').removeClass('active');
@@ -122,6 +130,7 @@ $(document).ready(function(){
 			$('.catalog_blocks').find('.new').addClass('active');
 		}
 	});
+	/*Блок фильтр на главной*/
 	$('.filter_button').on('click',function(){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
@@ -131,12 +140,24 @@ $(document).ready(function(){
 			$('.filter_content').slideDown('slow');
 		}
 	});
+	/*Блок фильтр в разделе каталога mobile*/
+	$('.filter_button_ct').on('click',function(){
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$('.filter_noselect').slideUp('slow');
+		}else{
+			$(this).addClass('active');
+			$('.filter_noselect').slideDown('slow');
+		}
+	});
+	/*Блок фильтр на главной*/
 	$('.tabs-section').find('.tb').each(function(){
 		$(this).on('click', function(){
 			$('.tabs-section').find('.tb').removeClass('active');
 			$(this).addClass('active');
 		});
 	});
+	/*Слайдер "Преимущества" на главной и в разделе СЗ очков*/
 	$('.owl-carousel.owl-advantages').owlCarousel({
 	    loop:false,
 	    dots:false,
@@ -155,6 +176,7 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	/*Слайдер "Бренды" на главной*/
 	$('.owl-carousel.owl-brands').owlCarousel({
 	    loop:false,
 	    dots:false,
@@ -174,6 +196,25 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	/*Слайдер "Баннеры" в разделе СЗ очков*/
+	$('.owl-carousel.owl-banner-section').owlCarousel({
+	    loop:false,
+	    dots:true,
+	    margin:64,
+	    nav:false,
+		responsive:{
+	        0:{
+	            items:1
+	        },
+	        768:{
+	            items:3
+	        },
+	        1140:{
+	            items:3
+	        }
+	    }
+	});
+	/*Фильтр в разделах каталога*/
 	$('.multifilter__elem').click(function () {
         var _this=$(this);
         var _this_parent=_this.parent();

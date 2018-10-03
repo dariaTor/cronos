@@ -1,0 +1,74 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="./styles/test.css")
+		link(rel="stylesheet" type="text/css" href="./styles/media.css")
+		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
+		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
+		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		script(type="text/javascript" src="./js/jquery.min.js")
+		script(type="text/javascript" src="./js/owl.carousel.min.js")
+		script(type="text/javascript" src="./js/dropdown.min.js")
+		script(type="text/javascript" src="./js/transition.min.js")
+		script(type="text/javascript" src="./js/main.js")
+	body
+		include header
+		//Begin content
+		section
+			.content
+				.pagePath
+					div
+						a(href="/") Главная
+						span  / 
+						a(href="services.html") Услуги
+						span  / 
+						|Цены на услуги
+				.page_const
+					h1 Цены на услуги
+					h2 Общий перечень офтальмологических услуг:
+					table.price
+						tbody
+							tr
+								th(colspan="2")
+									p Наименование офтальмологической услуги:
+								th(align="center")
+									p Цена (руб):
+							tr
+								td <strong>Вид осмотра:</strong>
+								td <strong>1. Диагностические осмотры</strong>
+								td
+							tr
+								td
+								td -первичный осмотр с диагностикой
+								td(align="center") 1300
+							tr
+								td
+								td -комплексное обследование при рефракционной хирургии (по лазерной коррекции зрения)
+								td(align="center") 2000
+							tr
+								td
+								td -прием (осмотр, консультация) врача-офтальмолога *без диагностики
+								td(align="center") 300
+							tr
+								td
+								td -прием повторный (осмотр, консультация) врача-офтальмолога * без диагностики
+								td(align="center") 150
+							tr
+								td
+								td -прием повторный (осмотр, консультация) врача-офтальмолога * с диагностикой
+								td(align="center") 700
+							tr
+								td
+								td -диспансерный осмотр пациента с глаукомой: - осмотр с периодичностью 1 раз в 3 месяца
+								td(align="center") 600
+							tr
+								td
+								td -диспансерный осмотр пациента с глаукомой: -осмотр с периодичностью 1 раз в 6 месяцев
+								td(align="center") 900						
+		//End content
+		include footer
+		.modal

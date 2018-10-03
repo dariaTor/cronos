@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="./styles/dropdown.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/transition.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="./styles/owl.theme.default.min.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="./js/dropdown.min.js"></script>
@@ -45,7 +44,7 @@
                     <div class="upmenu_cont">
                       <ul>
                         <li class="newmenu_element"><a href="#">О компании</a></li>
-                        <li class="newmenu_element"><a href="#">Новости и блог</a></li>
+                        <li class="newmenu_element"><a href="./news.html">Новости и блог</a></li>
                       </ul>
                     </div>
                     <div class="upmenu_cont">
@@ -76,7 +75,7 @@
                     </div>
                     <div class="upmenu_cont">
                       <ul>
-                        <li class="newmenu_element"><a href="#">Солнцезащитные очки</a></li>
+                        <li class="newmenu_element"><a href="./solntsezashchitnye-ochki-section.html">Солнцезащитные очки</a></li>
                         <li class="newmenu_element"><a href="#">Подарочные сертификаты</a></li>
                       </ul>
                     </div>
@@ -150,7 +149,7 @@
                   <div class="upmenu_cont">
                     <ul>
                       <li class="newmenu_element"><a href="#">О компании</a></li>
-                      <li class="newmenu_element"><a href="#">Новости и блог</a></li>
+                      <li class="newmenu_element"><a href="./news.html">Новости и блог</a></li>
                     </ul>
                   </div>
                   <div class="upmenu_cont">
@@ -162,7 +161,7 @@
                   <div class="upmenu_cont">
                     <ul>
                       <li class="newmenu_element"><a href="#">Арендодателям</a></li>
-                      <li class="newmenu_element"><a href="#">Контакты</a></li>
+                      <li class="newmenu_element"><a href="./contacts">Контакты</a></li>
                     </ul>
                   </div>
                 </div>
@@ -181,7 +180,7 @@
                   </div>
                   <div class="upmenu_cont">
                     <ul>
-                      <li class="newmenu_element"><a href="#">Солнцезащитные очки</a></li>
+                      <li class="newmenu_element"><a href="./solntsezashchitnye-ochki-section.html">Солнцезащитные очки</a></li>
                       <li class="newmenu_element"><a href="#">Подарочные сертификаты</a></li>
                     </ul>
                   </div>
@@ -262,7 +261,7 @@
                   <div class="upmenu_cont">
                     <ul>
                       <li class="newmenu_element"><a href="#">О компании</a></li>
-                      <li class="newmenu_element"><a href="#">Новости и блог</a></li>
+                      <li class="newmenu_element"><a href="./news.html">Новости и блог</a></li>
                     </ul>
                   </div>
                   <div class="upmenu_cont">
@@ -274,7 +273,7 @@
                   <div class="upmenu_cont">
                     <ul>
                       <li class="newmenu_element"><a href="#">Арендодателям</a></li>
-                      <li class="newmenu_element"><a href="#">Контакты</a></li>
+                      <li class="newmenu_element"><a href="./contacts.html">Контакты</a></li>
                     </ul>
                   </div>
                 </div>
@@ -293,7 +292,7 @@
                   </div>
                   <div class="upmenu_cont">
                     <ul>
-                      <li class="newmenu_element"><a href="#">Солнцезащитные очки</a></li>
+                      <li class="newmenu_element"><a href="./solntsezashchitnye-ochki-section.html">Солнцезащитные очки</a></li>
                       <li class="newmenu_element"><a href="#">Подарочные сертификаты</a></li>
                     </ul>
                   </div>
@@ -350,7 +349,7 @@
           <div class="left_menu__mobile">
             <div><a href="#"><span class="linz">Линзы</span></a></div>
             <div><a href="#"><span class="opravi">Оправы</span></a></div>
-            <div><a href="#"><span class="ochki">Солнечные очки</span></a></div>
+            <div><a href="#"><span class="ochki">Солнцезащитные очки</span></a></div>
           </div>
           <div class="left_menu">
             <div class="left_menu_catalog">
@@ -389,7 +388,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="tabs-section col-xs-12 col-sm-12 col-lg-8"><span>Показать:</span><span class="tb active" data-for="all">Все</span><span class="tb" data-for="opravy">Медицинские оправы</span><span class="tb" data-for="linzy">Контактные линзы</span><span class="tb" data-for="ochki">Солнцезащитные очки</span><span class="tb" data-for="other">Другое</span></div>
+                <div class="tabs-section col-xs-12 col-sm-12 col-lg-8"><span>Показать:</span>
+                  <input class="hidden" type="radio" id="all" name="all">
+                  <label class="tb active" for="all">Все</label>
+                  <input class="hidden" type="radio" id="opravy" name="opravy">
+                  <label class="tb" for="opravy">Медицинские оправы</label>
+                  <input class="hidden" type="radio" id="linzy" name="linzy">
+                  <label class="tb" for="linzy">Контактные линзы</label>
+                  <input class="hidden" type="radio" id="ochki" name="ochki">
+                  <label class="tb" for="ochki">Солнцезащитные очки</label>
+                  <input class="hidden" type="radio" id="other" name="other">
+                  <label class="tb" for="other">Другое</label>
+                </div>
                 <div class="tabs-price col-xs-12 col-sm-12 col-lg-4"><span>СТОИМОСТЬ</span><span class="rub">
                     <input name="arrFilter_before" value="37469"></span><span>-</span><span class="rub">
                     <input name="arrFilter_after" value="347469"></span></div>
@@ -1086,9 +1096,9 @@
           </div>
           <div class="col-md-3 col-sm-3 text-left">
             <ul class="footerMenu">
-              <li><a href="#">Контактные линзы</a></li>
-              <li><a href="#">Медицинские оправы и очки</a></li>
-              <li><a href="#">Солнцезащитные очки</a></li>
+              <li><a href="./kontaktnye-linzy-section.html">Контактные линзы</a></li>
+              <li><a href="./solntsezashchitnye-ochki-section.html">Медицинские оправы и очки</a></li>
+              <li><a href="./solntsezashchitnye-ochki-section.html">Солнцезащитные очки</a></li>
               <li><a href="#">Наблюдательная оптика</a></li>
               <li><a href="#">Подарочные сертификаты</a></li>
               <li><a href="#">Сопутствующие товары</a></li>
@@ -1099,7 +1109,7 @@
             <ul class="footerMenu">
               <li><a href="#">Проверка зрения</a></li>
               <li><a href="#">Детский врач и кабинет охраны зрения</a></li>
-              <li><a href="#">Цены на услуги</a></li>
+              <li><a href="./prices-for-services.html">Цены на услуги</a></li>
               <li><a href="#">Отзывы</a></li>
               <li><a href="#">Подбор и изготовление очков</a></li>
               <li><a href="#">Подбор и виды контактных линз</a></li>
@@ -1109,10 +1119,10 @@
           <div class="col-md-2 col-sm-2 text-left">
             <ul class="footerMenu">
               <li><a href="#">О компании</a></li>
-              <li><a href="#">Новости и блог</a></li>
+              <li><a href="./news.html">Новости и блог</a></li>
               <li><a href="#">Карьера</a></li>
               <li><a href="#">Арендодателям</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
             </ul>
             <div class="soclinks"><a href="#">Instagram</a><a href="#">Вконтакте</a><a href="#">Facebook</a></div>
           </div>

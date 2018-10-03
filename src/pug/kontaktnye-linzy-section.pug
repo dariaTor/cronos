@@ -25,16 +25,12 @@ html(lang="ru")
 					div
 						a(href="/") Главная
 						span  / 
-						|Солнцезащитные очки
-				//Здесь слайдер!!!
-				.banner__section
-					.owl-carousel.owl-theme.owl-banner-section
-						- for (var x = 0; x < 3; x++)
-							.item
-								div(style="background:#ececec;")
+						a(href="company.html") Контактные линзы
+						span  / 
+						|Астигматические линзы
 				.page_const
 					.catalog_list
-						h1 Солнцезащитные очки
+						h1 Астигматические линзы
 						.filter_content
 							.tabs-sort
 								.ui.dropdown.selection.sort
@@ -51,65 +47,40 @@ html(lang="ru")
 						.filter_noselect
 							.multifilter
 								.multifilter__elem
-									span.mf_ttl Пол
+									span.mf_ttl Производитель
 									.arr_down_icon
 								.multifilter__list
-									div(data-id="1") Женские
-									div(data-id="1") Мужские
-									div(data-id="1") Унисекс
-							.multifilter
-								.multifilter__elem
-									span.mf_ttl Возраст
-									.arr_down_icon
-								.multifilter__list
-									div(data-id="1") Взрослые
-									div(data-id="1") Детские
-							.multifilter
-								.multifilter__elem
-									span.mf_ttl Материал
-									.arr_down_icon
-								.multifilter__list
-									div(data-id="1") Пластик
-									div(data-id="1") Металл
-									div(data-id="1") Комбинированные
+									div(data-id="1") Alcon
+									div(data-id="1") CooperVision
+									div(data-id="1") Johnson&Johnson
 							.multifilter
 								.multifilter__elem
 									span.mf_ttl Бренд
 									.arr_down_icon
 								.multifilter__list
-									div(data-id="1") Ray-Ban
-									div(data-id="1") Vogue
-									div(data-id="1") Adidas
+									div(data-id="1") Acuvue
+									div(data-id="1") Air Oprix
 							.multifilter
 								.multifilter__elem
-									span.mf_ttl Тип оправы
+									span.mf_ttl Срок ношения
 									.arr_down_icon
 								.multifilter__list
-									div(data-id="1") Безободковая
-									div(data-id="1") Ободковая
-									div(data-id="1") Полуободковая
+									div(data-id="1") Один день
+									div(data-id="1") Две недели
+									div(data-id="1") Один месяц
 							.multifilter
 								.multifilter__elem
-									span.mf_ttl Форма оправы
+									span.mf_ttl Материал
 									.arr_down_icon
 								.multifilter__list
-									div(data-id="1") Бабочка
-									div(data-id="1") Капли
-									div(data-id="1") Круглая
-							.multifilter
-								.multifilter__elem
-									span.mf_ttl Цвет
-									.arr_down_icon
-								.multifilter__list
-									div(data-id="1") Красный
-									div(data-id="1") Черный
-									div(data-id="1") Коричневый
+									div(data-id="1") силикон-гидрогелевые
+									div(data-id="1") гидрогелевые
 							div
 								a.bt.smart_filter(href="#") Сбросить фильтр		
 						.product_list
 							.stroke_items
 								.row.row-flex
-									- for (var x = 0; x < 16; x++)
+									- for (var x = 0; x < 5; x++)
 										.col-sm-4.col-md-3.col-xs-6.product
 											.product_item
 												.row.row-flex
@@ -120,11 +91,11 @@ html(lang="ru")
 																	i
 															.thumbnail.two_img
 																a(href="#")
-																	img.thumb(src="./img/ray-ban.jpg")
+																	img.thumb(src="./img/linzy.jpg")
 															.flaglist
 																.flag.sale Распродажа -40%
 													.col-xs-12.col-sm-12.col-descr
-														a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+														a.name(href="#") Контактные линзы  Acuvue Oasys for Astigmatism
 														.price_bl
 															span.act 4 000 руб. 
 															span.old 4 100 руб.
@@ -138,29 +109,16 @@ html(lang="ru")
 								.paginate.show_more_positions
 									a(href="#") Показать ещё
 										span.icon-plus
-							.advantages
-								.adv_title Почему клиенты обращаются к нам:
-								.owl-carousel.owl-theme.owl-advantages
-									.item
-										img(src='./img/no-imag.png')
-										p.adv_main Высокоточное производство
-										p.adv_oth Очки любой сложности
-									.item
-										img(src='./img/no-imag.png')
-										p.adv_main Закажите<br/> в интернет-магазине
-										p.adv_oth Доставим по России
-									.item
-										img(src='./img/no-imag.png')
-										p.adv_main Близко к вашему дому и офису
-										p.adv_oth Получите заказ в любой оптике сети
-									.item
-										img(src='./img/no-imag.png')
-										p.adv_main Профессионалы<br/> в диагностике зрения
-										p.adv_oth Эксперты в прогрессивных и контактных линзах
-									.item
-										img(src='./img/no-imag.png')
-										p.adv_main Высокоточное производство
-										p.adv_oth Очки любой сложности
+							.maker_block
+								.row
+									.col-md-3.col-sm-3.col-xs-6.item
+										img(src="./img/logo_biosoft.png")
+									.col-md-3.col-sm-3.col-xs-6.item
+										img(src="./img/logo_alcon.png")
+									.col-md-3.col-sm-3.col-xs-6.item
+										img(src="./img/logo_lomb.png")
+									.col-md-3.col-sm-3.col-xs-6.item
+										img(src="./img/logo_johnson.png")
 							.st_discription В нашем интернет-магазине Вы увидите лишь часть коллекции солнцезащитных очков, которая представлена в «Оптике Кронос». Мы отобрали ряд наиболее интересных, с нашей точки зрения, брендов, для того, чтобы Вы смогли оценить разнообразие, которое ждет Вас в наших салонах, где можно найти мужские, женские, детские солнцезащитные очки новых коллекций на любой вкус и для самых взыскательных клиентов.
 		//End content
 		include footer

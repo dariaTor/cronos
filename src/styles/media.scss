@@ -144,72 +144,26 @@
 			}
 		}
 		.filter_content{
-			.tabs-section span.tb{
+			.tabs-section label.tb{
 				margin: 5px;
-			}
-		}
-		.catalog_blocks{
-			.product_item{
-				min-height: 263px;
-				.image{
-					min-height: auto;
-					.like_icons{
-						position: relative;
-						right: auto;
-						span i{
-							margin: 0 auto;
-						}
-					}
-				}
-				.flaglist{
-					bottom: 0;
-					.flag{
-						font-size: 12px;
-					}
-				}
-				span{
-					font-size: 14px;
-				}
-			}
-			.product_item:hover{
-				.col-descr{
-					margin-bottom: 9px;
-				}
-				.buy_one_click{
-					margin: 7px 0;
-				}
-			}
-			.name{
-				font-size: 12px;
-				margin: 0 17px 10px;
-				line-height: 14px;
-			}
-			.col-buttons .add_basket{
-				width: 125px;
-				span{
-					font-size: 14px;
-					padding: 8px 0;
-				}
 			}
 		}
 		.thumbnail{
 			margin-bottom: 10px;
 		}
 	}
-	.advantages_on_main{
-		.advantages{
-			padding: 30px 20px;
-			margin: 0;
-			.adv_title{
-				position: relative;
-			}
-			.owl-nav{
-				left: 0;
-				top: 10px;
-			}
-			.owl-carousel{
-				padding-top: 70px;
-			}
+	.advantages{
+		padding: 30px 20px;
+		margin: 0;
+		.adv_title{
+			position: relative;
+		}
+		.owl-nav{
+			left: 0;
+			top: 10px;
+		}
+		.owl-carousel{
+			padding-top: 70px;
 		}
 	}
 	.interactive_block {
@@ -257,6 +211,9 @@
 		}
 	}
 	.page_const{
+		h1{
+			font-size: 24px;
+		}
 		a.bold_a,p{
 			font-size: 16px;
 		}
@@ -270,11 +227,101 @@
 			display: block;
 		}
 	}
-	.page_const,.pagePath{
+	.page_const,.pagePath,.banner__section{
 		padding: 0 20px;
 	}
 	.visible-xs{
 		display: block;
+	}
+	.catalog_blocks,.product_list{
+		.product_item{
+			min-height: 263px;
+			.image{
+				min-height: auto;
+				.like_icons{
+					position: relative;
+					right: auto;
+					span i{
+						margin: 0 auto;
+					}
+				}
+			}
+			.flaglist{
+				bottom: 0;
+				.flag{
+					font-size: 12px;
+				}
+			}
+			span{
+				font-size: 14px;
+			}
+		}
+		.product_item:hover{
+			.col-descr{
+				margin-bottom: 9px;
+			}
+			.buy_one_click{
+				margin: 7px 0;
+			}
+		}
+		.name{
+			font-size: 12px;
+			margin: 0 17px 10px;
+			line-height: 14px;
+		}
+		.col-buttons .add_basket{
+			width: 125px;
+			span{
+				font-size: 14px;
+				padding: 8px 0;
+			}
+		}
+	}
+	.catalog_list {
+		.filter_content{
+			display: inline-block;
+			margin: 0;
+			.tabs-sort{
+				float: left;
+			}
+		}
+		.filter_noselect{
+			display: none;
+		}
+		h1{
+			display: block;
+		}
+	}	
+	.maker_block{
+		overflow: hidden;
+		.item{
+			margin: 10px 0;
+			display: flex;
+		    align-items: center;
+		    flex-direction: column-reverse;
+		}
+	}
+	table.price{
+		font-size: 14px;
+		line-height: 24px;
+		tr td:nth-child(2){
+			width: 46%;
+			max-width: 300px;
+		}
+	}
+	.review_yandex{
+		position: relative;
+		a{
+			margin: 0;
+		}
+	}
+	.reviews_block{
+		margin-top: 40px;
+		display: block;
+		.col_1,.col_2{
+			margin: 0;
+			width: 100%;
+		}
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1139px){
@@ -351,7 +398,7 @@
 	}
 	.offer_on_main{
 		.filter_content{
-			span.tb{
+			label.tb{
 				font-size: 12px;
 			}
 			.ui.selection.dropdown{
@@ -359,13 +406,11 @@
 			}
 		}
 	}
-	.advantages_on_main{
-		.advantages{
-			margin: 80px 20px;
-			.owl-nav{
-				left: auto;
-				right: 0;
-			}
+	.advantages,.brands_on_main .advantages{
+		margin: 80px 20px;
+		.owl-nav{
+			left: auto;
+			right: 0;
 		}
 	}
 	.interactive_block{
@@ -383,9 +428,14 @@
 	.visible-sm{
 		display: block;
 	}
+	table.price{
+		tr td:nth-child(2){
+			width: 60%;
+		}
+	}
 }
 @media screen and (min-width: 768px){
-	.mobile-banner,.header_bottom.ver__mob,.left_menu__mobile,.footerMenu__mobile{
+	.mobile-banner,.header_bottom.ver__mob,.left_menu__mobile,.footerMenu__mobile,.filter_button_ct{
 		display: none;
 	}
 	.col-image{
@@ -494,7 +544,7 @@
 		}
 	}
 	.content{
-		overflow: auto;
+		/*overflow: auto;*/
 		text-align: center;
 		.main_banner{
 			float: unset;
@@ -504,7 +554,7 @@
 	}
 	.filter_content{
 		margin: 20px 0;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		.tabs-price{
 			margin: 32px 0 0;
 			text-align: left;
@@ -517,6 +567,12 @@
 	.offer_on_main{
 		margin-top: 37px;
 		padding: 0 20px;
+	}
+	.filter_noselect{
+		flex-wrap: wrap;
+		.multifilter{
+			margin-bottom: 18px;
+		}
 	}
 }
 @media screen and (min-width: 1140px){
