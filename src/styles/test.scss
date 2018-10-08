@@ -692,7 +692,6 @@ footer{
 			text-align: center;
 			font-weight: bold;
 			font-size: 18px;
-			color: #000;
 		}
 		span.act{
 			color: #fd4e3d;
@@ -789,26 +788,9 @@ footer{
 	.col-buttons{
 		display: none;
 		span{
-			color: #959595;
 			font-size: 17px;
 			font-weight: normal;
 			cursor: pointer;
-		}
-		.add_basket{
-			width: 190px;
-			margin: 0 auto;
-			span{
-				border-radius: 23px;
-				display: block;
-				background: #0bb998;
-				color: #fff;
-				text-transform: uppercase;
-				font-size: 16px;
-				padding: 13px 0;
-			}
-			span:hover{
-				background: #ff7373;
-			}
 		}
 		.buy_one_click{
 			margin: 23px 0 13px;
@@ -817,12 +799,29 @@ footer{
 			margin-bottom: 23px;
 		}
 		.buy_one_click span,.info_stock span{
+			color: #959595;
 			display: inline;
 			border-bottom: 1px dotted #959595;
 		}
 	}
 	.product_item:hover .col-buttons{
 		display: block;
+	}
+}
+.add_basket{
+	width: 190px;
+	margin: 0 auto;
+	span{
+		border-radius: 23px;
+		display: block;
+		background: #0bb998;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 16px;
+		padding: 13px 0;
+	}
+	span:hover{
+		background: #ff7373;
 	}
 }
 .banner__section{
@@ -1346,3 +1345,221 @@ table.price{
 	}
 }
 /* ----- REVIEWS END ----- */
+/* ----- ELEMENT ----- */
+.catalog_element{
+	.element_block_1,.element_block_3{
+		width: calc(59% - 39px);
+		margin-right: 39px;
+	}
+	.element_block_1,.element_block_2{
+		display: inline-block;
+	}
+	.element_block_2{
+		width: calc(41% - 39px);
+		margin-left: 39px;
+		float: right;
+	}
+	.item_info h1{
+		font-size: 24px;
+		line-height: 30px;
+		margin-bottom: 30px;
+	}
+	.priceProduct{
+		margin-bottom: 30px;
+	}
+	.mainPrice{
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+	.paramProduct p{
+		padding-bottom: 22px;
+	}
+	.toggle_radio{
+		max-width: 369px;
+		vertical-align: top;
+   		width: 100%;
+   		position: relative;
+   		height: 42px;
+    	margin-bottom: 24px;
+    	border-radius: 21px;
+    	display: inline-block;
+    	border: 1px solid #d4d3d3;
+    	.radio_one{
+    		position: relative;
+    		padding: 0 15px;
+    		display: inline-block;
+    		width: 50%;
+    		text-align: center;
+    		text-transform: uppercase;
+    		line-height: 40px;
+    		font-size: 16px;
+    		font-weight: 700;
+    		border-radius: 21px;
+    		color: #a1a7ac;
+    		transition: color 0.5s ease;
+    		cursor: pointer;
+    	}
+    	.radio_one.active{
+    		color: #212121;
+    		background: #e2e2e2;
+    	}
+    	.radio_one:first-child{
+    		margin-right: -4px;
+    	}
+	}
+	.icon-down::before{
+	    content: '';
+	    background: url(../img/arrow.png);
+	    width: 12px;
+	    height: 7px;
+	    right: 6px;
+	    top: 8px;
+	    position: absolute;	
+	}
+	.item_modifications_line{
+		margin-bottom: 10px;
+		.mod_item{
+			position: relative;
+			width: 118px;
+    		margin-right: 20px;
+    		display: inline-block;
+    		label{
+    			padding-bottom: 7px;
+    			font-family: 'ProximaNova Bold';
+    			line-height: 24px;
+    		}
+		}
+		.modifications_title{
+			display: block;
+			line-height: 20px;
+			color: #626f78;
+			padding: 10px 0;
+		}
+		.form-select-link{
+			padding: 4px 5px;
+		}
+		.form-select-list{
+			top: 53px;
+		}
+	}
+	.even{
+		display: none;
+	}
+	.buyBtn{
+		margin: 40px 0;
+		.item{
+			display: inline-block;
+			margin-right: 20px;
+			span{
+				text-align: center;
+				font-weight: 700;
+				letter-spacing: 0.5px;
+				cursor: pointer;
+			}
+		}
+		.add_basket{
+			width: 144px;
+		}
+		.buy_one_click{
+			width: 197px;
+			span{
+				border-radius: 23px;
+			    display: block;
+			    background: #fff;
+			    color: #212121;
+			    border: 1px solid #d4d3d3;
+			    text-transform: uppercase;
+			    font-size: 16px;
+			    padding: 13px 0;
+			}
+		}
+	}
+	.stockBtn{
+		.item{
+			padding-left: 35px;
+			position: relative;
+			a{
+				font-weight: 700;
+				font-size: 16px;
+				color: #212121;
+				line-height: 40px;
+				border-bottom: 1px dotted #7c7c7e;
+			}
+		}
+		.add_like::before,.stock_info::before,.pay_info::before{
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 10px;
+		}
+		.add_like::before{
+			background: url(../img/like.png) no-repeat;
+			width: 20px;
+			height: 17px;
+		}
+		.stock_info::before{
+			background: url(../img/stock.png) no-repeat;
+			width: 14px;
+			height: 18px;
+		}
+		.pay_info::before{
+			background: url(../img/info.png) no-repeat;
+			width: 10px;
+			height: 21px;
+		}
+	}
+	.advan_block{
+		margin-top: 40px;
+		.item:first-child{
+			float: left;
+		}
+		.item{
+			width: calc(50% - 25px);
+			margin-right: 25px;
+			display: inline-block;
+			float: left;
+		}
+	}
+	.item_accordion{
+		margin-top: 70px;
+		.plashka{
+			display: inline-block;
+			color: #a1a7ac;
+			text-transform: uppercase;
+			font-size: 15px;
+			line-height: 36px;
+			margin-right: 40px;
+			font-weight: 700;
+		}
+		.plashka.active{
+			color: #212121;
+		}
+		.item{
+			padding: 50px 40px 0 0;
+			display: none;
+		}
+		.item.active{
+			display: block;
+		}
+	}
+	.ch_product{
+		.ch_product_line{
+			display: table;
+		    width: 100%;
+		    border-bottom: 1px solid #d1d1d1;
+		}
+		.name,.value{
+			width: 50%;
+			display: table-cell;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		a{
+			color: #a7dbf8;
+			font-weight: 700;
+		}
+	}
+}
+/* ----- ELEMENT END----- */

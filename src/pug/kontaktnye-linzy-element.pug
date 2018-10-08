@@ -1,0 +1,226 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="./styles/test.css")
+		link(rel="stylesheet" type="text/css" href="./styles/media.css")
+		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
+		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
+		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		link(rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/titov.css")
+		script(type="text/javascript" src="./js/jquery.min.js")
+		script(type="text/javascript" src="./js/owl.carousel.min.js")
+		script(type="text/javascript" src="./js/dropdown.min.js")
+		script(type="text/javascript" src="./js/transition.min.js")
+		script(type="text/javascript" src="./js/main.js")
+	body
+		include header
+		//Begin content
+		section
+			.content
+				.pagePath
+					div
+						a(href="/") Главная
+						span  / 
+						a(href="services.html") Контактные линзы
+						span  / 
+						|Контактные линзы 1-Day Acuvue  TruEye 30 шт.
+				.page_const
+					.catalog_element
+						.element_block_1.item_slider
+							img(src='./img/linz_element.jpg')
+						.element_block_2.item_info
+							h1 Контактные линзы 1-Day Acuvue  TruEye 30 шт.
+							.priceProduct
+								.mainPrice 7 345 <i class="fa fa-rub"></i>
+							.paramProduct
+								p <strong>Выберите параметры контактных линз:</strong>
+								.toggle_radio
+									label.bt_white.radio_one(for="even")
+										span Одинаковые
+										input(type="radio" name="even" id="even" class="hidden")
+									label.bt_white.radio_one.active(for="differing")
+										span Различающиеся
+										input(type="radio" name="differing" id="differing" class="hidden")
+								.item_modification.even
+									.item_modifications_line
+										.mod_item.js-form-select
+											label(for="sfera") Оптическая сила
+											input(type="hidden" name="sfera" value="null" id="sfera")
+											.form-select-link
+												span#sfera_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="-12" data-id="sfera") -12
+												li
+													span.js-select-choise(data-val="-11" data-id="sfera") -11
+												li
+													span.js-select-choise(data-val="-10" data-id="sfera") -10
+										.mod_item.js-form-select
+											label(for="curtivate") Радиус кривизны
+											input(type="hidden" name="curtivate" value="null" id="curtivate")
+											.form-select-link
+												span#curtivate_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="8.5" data-id="curtivate") 8.5
+												li
+													span.js-select-choise(data-val="8.6" data-id="curtivate") 8.6
+												li
+													span.js-select-choise(data-val="9.0" data-id="curtivate") 9.0
+										.mod_item.js-form-select
+											label(for="quantity") Упаковок
+											input(type="hidden" name="quantity" value="1" id="quantity")
+											.form-select-link
+												span#quantity_val 1 шт
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="1" data-id="quantity") 1 шт
+												li
+													span.js-select-choise(data-val="2" data-id="quantity") 2 шт
+												li
+													span.js-select-choise(data-val="3" data-id="quantity") 3 шт
+								.item_modification.differing
+									.item_modifications_line
+										span.modifications_title Правый глаз (OD)
+										.mod_item.js-form-select
+											label(for="sfera_od") Оптическая сила
+											input(type="hidden" name="sfera_od" value="null" id="sfera_od")
+											.form-select-link
+												span#sfera_od_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="-12" data-id="sfera_od") -12
+												li
+													span.js-select-choise(data-val="-11" data-id="sfera_od") -11
+												li
+													span.js-select-choise(data-val="-10" data-id="sfera_od") -10
+										.mod_item.js-form-select
+											label(for="curtivate_od") Радиус кривизны
+											input(type="hidden" name="curtivate_od" value="null" id="curtivate_od")
+											.form-select-link
+												span#curtivate_od_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="8.5" data-id="curtivate_od") 8.5
+												li
+													span.js-select-choise(data-val="8.6" data-id="curtivate_od") 8.6
+												li
+													span.js-select-choise(data-val="9.0" data-id="curtivate_od") 9.0
+										.mod_item.js-form-select
+											label(for="quantity_od") Упаковок
+											input(type="hidden" name="quantity_od" value="1" id="quantity_od")
+											.form-select-link
+												span#quantity_od_val 1 шт
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="1" data-id="quantity_od") 1 шт
+												li
+													span.js-select-choise(data-val="2" data-id="quantity_od") 2 шт
+												li
+													span.js-select-choise(data-val="3" data-id="quantity_od") 3 шт
+									.item_modifications_line
+										span.modifications_title Левый глаз (OS)
+										.mod_item.js-form-select
+											label(for="sfera_os") Оптическая сила
+											input(type="hidden" name="sfera_os" value="null" id="sfera_os")
+											.form-select-link
+												span#sfera_os_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="-12" data-id="sfera_os") -12
+												li
+													span.js-select-choise(data-val="-11" data-id="sfera_os") -11
+												li
+													span.js-select-choise(data-val="-10" data-id="sfera_os") -10
+										.mod_item.js-form-select
+											label(for="curtivate_os") Радиус кривизны
+											input(type="hidden" name="curtivate_os" value="null" id="curtivate_os")
+											.form-select-link
+												span#curtivate_os_val Выберете...
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="8.5" data-id="curtivate_os") 8.5
+												li
+													span.js-select-choise(data-val="8.6" data-id="curtivate_os") 8.6
+												li
+													span.js-select-choise(data-val="9.0" data-id="curtivate_os") 9.0
+										.mod_item.js-form-select
+											label(for="quantity_os") Упаковок
+											input(type="hidden" name="quantity_os" value="1" id="quantity_os")
+											.form-select-link
+												span#quantity_os_val 1 шт
+												span.select-arrow
+													i.icon-down(aria-hidden="true")
+											ul.form-select-list
+												li
+													span.js-select-choise(data-val="1" data-id="quantity_os") 1 шт
+												li
+													span.js-select-choise(data-val="2" data-id="quantity_os") 2 шт
+												li
+													span.js-select-choise(data-val="3" data-id="quantity_os") 3 шт
+							.buyBtn
+								.item.add_basket
+									span В корзину
+								.item.buy_one_click
+									span Купить в 1 клик
+							.stockBtn
+								.item.add_like
+									a(href="javascript:void(0)") Добавить в избранное
+								.item.stock_info
+									a(href="javascript:void(0)") Наличие в салонах
+								.item.pay_info
+									a(href="#") Оплата и доставка
+							.advan_block
+								.item
+									img(src="./img/noimg_adv_elem.png")
+									p
+										strong Бесплатная примерка <br/>перед покупкой на дому
+								.item
+									img(src="./img/noimg_adv_elem.png")
+									p
+										strong Бесплатная доставка <br/>от 1000 рублей
+						.element_block_3.item_accordion
+							.plashka(data-title="charahClickLink") Характеристики
+							.plashka.active(data-title="descripClickLink") Описание
+							.plashka(data-title="garantClickLink") Гарантия подлинности 100%
+							#charahClickLink.item
+								.ch_product
+									.ch_product_line
+										.name Производитель
+										.value Johnson&Johnson
+									.ch_product_line
+										.name Упаковка, шт.
+										.value 30
+									.ch_product_line
+										.name Бренд
+										.value <a href="#">Acuvue</a>
+							#descripClickLink.item.active
+								div 
+									p Уникальная технология HYDRACLEAR 1 для создания высокоувлажненных и ультрагладких контактных линз.<br/><br/>Рекомендованы для дневного ношения одноразового использования.<br/>Имеют УФ-фильтр 1 класса*. <br/>* Контактные линзы с УФ-фильтром не являются полноценной заменой солнцезащитным очкам с УФ-защитой, т.к. не полностью закрывают глаз и зону вокруг глаза.
+							#garantClickLink.item
+								p &laquo;Оптика Кронос&raquo; работает с&nbsp;лучшими поставщиками средств для контактной коррекции зрения. Подлинность всех товаров в&nbsp;интернет-магазине <a href="/sertificates/">подтверждается сертификатами</a>.
+		//End content
+		script(type="text/javascript" src="./js/titov.js")
+		include footer
+		.modal

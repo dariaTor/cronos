@@ -241,4 +241,22 @@ $(document).ready(function(){
 	        }
 	    });
 	}
+	$('.item_accordion').on('click', '.plashka', function(){
+		var id=$(this).attr('data-title');
+		if(!$(this).hasClass('active')){
+			$('.item_accordion').find('.item').removeClass('active');
+			$('.item_accordion').find('.plashka').removeClass('active');
+			$('#'+id).addClass('active');
+			$(this).addClass('active');
+		}
+	});
+	$('.radio_one').on('click', function(){
+		if(!$(this).hasClass('active')){
+			$('.radio_one').removeClass('active');
+			$('.item_modification').css('display', 'none');
+			$(this).addClass('active');
+			$('.'+$(this).attr('for')).css('display', 'block');
+		}
+	});
+
 });
