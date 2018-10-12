@@ -296,7 +296,7 @@ header{
 /* ----- SECTION ----- */
 section{
 	position: relative;
-	overflow: auto;
+	// overflow: auto;
 	margin-bottom: 70px;
 }
 /* ----- SECTION END ----- */
@@ -568,6 +568,7 @@ footer{
 .filter_content{
 	margin: 43px 0;
 	display: none;
+	overflow: hidden;
 	.tabs-section{
 		display: inline-block;
 		/*margin-right: 94px;*/
@@ -595,44 +596,36 @@ footer{
 	}
 	.tabs-sort{
 		display: inline-block;
-		/*margin-right: 104px;*/
-		.ui.dropdown:not(.button)>.default.text{
-			color: #212121;
+		.js-form-select{
+			width: 200px;
+			margin-bottom: 30px;
 		}
-		.ui.selection.dropdown{
-			margin-bottom: 32px;
-			padding-top: 7px;
-			padding-bottom: 6px;
-			min-height: auto;
-			line-height: 10px;
-			border: 1px solid #a1a7ac;
-			background: #f6f6f6;
-			border-radius: 0;
+		.form-select-link{
+			font-size: 14px;
+			font-weight: 700;
+			padding: 6px 7px;
 		}
-		.ui.dropdown>.dropdown.icon:before{
+		.form-select-list{
+			width: 200px;
+			top: 30px;
+			background-color: #f6f6f6;
+		}
+		.form-select-list>li:not(:hover){
+			background-color: #f6f6f6;
+		}
+		.dropdown.icon:before{
 			content: '';
 			background: url('../img/arrow.png');
 			width: 12px;
 			height: 7px;
 			right: 6px;
-    		top: 9px;
+    		top: 7px;
     		position: absolute;
-		}
-		.text{
-			min-width: 160px;
-			font-weight: 700;
-		}
-		.ui.dropdown .menu>.item:hover{
-			background: #fff;
-			color: #14b6a9;
-		}
-		.ui.dropdown .menu>.item{
-			font-size: 14px;
 		}
 	}
 	.tabs-price{
 		display: inline-block;
-		padding: 4px 0;
+		margin: 4px 0;
 		text-align: right;
 		input{
 			width: 82px;
@@ -667,113 +660,96 @@ footer{
 	}
 }
 /* ----- CATALOG SECTION ----- */
-.catalog_blocks,.product_list{
-	padding-bottom: 58px;
-	display: table;
-	.block_bb{
-		display: none;
-	}
-	.block_bb.active{
-		display: block;
-	}
-	.product_item{
-	    margin: 20px 0;
+.product_item{
+	margin: 20px 0;
+	text-align: center;
+	background: #fff;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	max-width: 100%;
+	min-height: 351px;
+    span{
+		display: inline-block;
+		width: 100%;
 		text-align: center;
-		background: #fff;
-	    position: relative;
-	    display: inline-block;
-	    vertical-align: top;
-	    box-sizing: border-box;
-	    max-width: 100%;
-	    min-height: 351px;
-	    span{
-			display: inline-block;
-			width: 100%;
-			text-align: center;
-			font-weight: bold;
-			font-size: 18px;
-		}
-		span.act{
-			color: #fd4e3d;
-		}
-		span.old{
-			color: #959595;
-			text-decoration: line-through;
-			margin: 8px 0 0;
-		}
-	    .image{
-	    	min-height: 175px;
-	    	width: 100%;
-   			position: relative;
-   			.like_icons{
-   				position: absolute;
-   				top: 14px;
-   				right: 14px;
-   				z-index: 4;
-   				span{
-   					visibility: visible;
-   					display: block;
-   					cursor: pointer;
-   					i{
-   						background: url('../img/like.png');
-   						display: block;
-   						width: 20px;
-   						height: 17px;
-   					}
-   					i:hover{
-   						background: url('../img/like_add.png');
-   					}
-   				}
-   			}
-   			a{
-   				display: inline-block;
-   			}
-   			img{
-   				max-width: 100%;
-   				height: auto;
-   				display: block;
-   			}
-   			.thumbnail{
-   				border: none;
-			    top: 0;
-			    width: 100%;
-			    z-index: 1;
-			    text-align: center;
-   			}
-	    }
-	    .flaglist{
-	    	position: absolute;
-	    	z-index: 3;
-	    	display: block;
-	    	width: 100%;
-	    	text-align: center;
-	    	bottom: 40px;
-	    	top: initial;
-	    	.flag{
-	    		display: inline-block;
-	    		padding: 0 6px;
-	    	}	
-	    	.flag.sale{
-	    		color: #fd4e3d;
-	    		border: 1px solid #fd4e3d;
-	    	}
-	    	.flag.hit{
-	    		color: #01b5ea;
-	    		border: 1px solid #01b5ea;
-	    	}
-	    	.flag.new{
-	    		color: #0bb998;
-	    		border: 1px solid #0bb998;
-	    	}
-	    }
+		font-weight: bold;
+		font-size: 18px;
 	}
-	.product_item:hover{
-		box-shadow: 0 0 25px 0 #d4d2d2;
-		overflow: hidden;
-		position: absolute;
-		left:0;
-		z-index: 200;
+	span.act{
+		color: #fd4e3d;
 	}
+	span.old{
+		color: #959595;
+		text-decoration: line-through;
+		margin: 8px 0 0;
+	}
+    .image{
+    	min-height: 175px;
+    	width: 100%;
+		position: relative;
+		.like_icons{
+			position: absolute;
+	   		top: 14px;
+	   		right: 14px;
+	   		z-index: 4;
+	   		span{
+	   			visibility: visible;
+	   			display: block;
+	   			cursor: pointer;
+	   			i{
+	   				background: url('../img/like.png');
+	   				display: block;
+	   				width: 20px;
+	   				height: 17px;
+	   			}
+	   			i:hover{
+	   				background: url('../img/like_add.png');
+	   			}
+	   		}
+	   	}
+   		a{
+   			display: inline-block;
+   		}
+   		img{
+   			max-width: 100%;
+   			height: auto;
+   			display: block;
+   		}
+   		.thumbnail{
+   			border: none;
+		    top: 0;
+		    width: 100%;
+		    z-index: 1;
+		    text-align: center;
+   		}
+    }
+    .flaglist{
+    	position: absolute;
+    	z-index: 3;
+    	display: block;
+    	width: 100%;
+    	text-align: center;
+    	bottom: 40px;
+    	top: initial;
+    	.flag{
+    		display: inline-block;
+    		padding: 0 6px;
+    	}	
+    	.flag.sale{
+    		color: #fd4e3d;
+    		border: 1px solid #fd4e3d;
+    	}
+    	.flag.hit{
+    		color: #01b5ea;
+    		border: 1px solid #01b5ea;
+    	}
+    	.flag.new{
+    		color: #0bb998;
+    		border: 1px solid #0bb998;
+    	}
+    }
 	.col-descr{
 		margin-bottom: 17px;
 	}
@@ -804,7 +780,24 @@ footer{
 			border-bottom: 1px dotted #959595;
 		}
 	}
-	.product_item:hover .col-buttons{
+}
+.product_item:hover .col-buttons{
+	display: block;
+}
+.product_item:hover{
+	box-shadow: 0 0 25px 0 #d4d2d2;
+	overflow: hidden;
+	position: absolute;
+	left:0;
+	z-index: 200;
+}
+.catalog_blocks,.product_list{
+	padding-bottom: 58px;
+	display: table;
+	.block_bb{
+		display: none;
+	}
+	.block_bb.active{
 		display: block;
 	}
 }
@@ -843,6 +836,13 @@ footer{
 	    float: none;
 	    .tabs-sort{
 	    	float: right;
+	    	.form-select-list{
+	    		top: 43px;
+	    		background-color: #fff;
+	    	}		
+	    	.form-select-list>li:not(:hover){
+				background-color: #fff;
+			}
 	    }
 	}
 	.product_list{
@@ -879,7 +879,7 @@ footer{
 }
 .filter_noselect{
 	display: inline-flex;
-    justify-content: space-between;
+    justify-content: left;
     width: 100%;
     padding: 16px 0;
     margin-top: 35px;
@@ -899,6 +899,7 @@ footer{
 	    max-width: 175px;
 	    white-space: nowrap;
 	    border: 1px solid #d4d3d3;
+	    margin-right: 20px;
 	    .multifilter__elem{
 	    	position: relative;
 		    z-index: 9;
@@ -975,9 +976,15 @@ footer{
     	border: 1px solid #0bb998;
     }
 }
+.product_list{
+	.maker_block{
+		padding: 100px 0;
+	}
+}
 .maker_block{
-	padding: 100px 0;
+	display: grid;
 	text-align: center;
+	padding: 50px 0;
 	.item{
 		min-height: 53px;
 	}
@@ -1044,7 +1051,10 @@ span.icon-plus{
 	height: 19px;
 	display: inline-block;
 }
-.fa-arr-left{
+.fa-arr-right:hover,.fa-arr-left:hover{
+	background: url('../img/arrow-np-hover.png');
+}
+.fa-arr-left,.fa-arr-left:hover{
 	transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -1347,6 +1357,11 @@ table.price{
 /* ----- REVIEWS END ----- */
 /* ----- ELEMENT ----- */
 .catalog_element{
+	position: relative;
+	text-align: left;
+	p{
+		font-size: 16px;
+	}
 	.element_block_1,.element_block_3{
 		width: calc(59% - 39px);
 		margin-right: 39px;
@@ -1524,6 +1539,7 @@ table.price{
 	}
 	.item_accordion{
 		margin-top: 70px;
+		min-height: 350px;
 		.plashka{
 			display: inline-block;
 			color: #a1a7ac;
@@ -1532,6 +1548,7 @@ table.price{
 			line-height: 36px;
 			margin-right: 40px;
 			font-weight: 700;
+			cursor: pointer;
 		}
 		.plashka.active{
 			color: #212121;
@@ -1560,6 +1577,45 @@ table.price{
 			color: #a7dbf8;
 			font-weight: 700;
 		}
+	}
+	.previewPic{
+		width: 78px;
+		display: inline-block;
+	}
+	.mainImage{
+		width: calc(100% - 78px);
+		display: inline-block;
+	}
+}
+.like_it_block{
+	margin: 60px auto -60px;
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+	.like_title{
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 34px;
+		position: absolute;
+	}
+	.owl-carousel{
+		padding-top: 90px;
+		.owl-stage-outer{
+			overflow: visible;
+		}
+	}
+	.owl-nav{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-top: 0;
+		.owl-next,.owl-prev{
+			margin: 5px 17px;
+		}
+	}
+	.product_item:hover{
+		box-shadow: none;
 	}
 }
 /* ----- ELEMENT END----- */

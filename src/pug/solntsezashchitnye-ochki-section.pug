@@ -10,7 +10,8 @@ html(lang="ru")
 		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
-		link(rel="stylesheet" type="text/css" href="./styles/owl.theme.default.min.css")
+		link(rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/titov.css")
 		script(type="text/javascript" src="./js/jquery.min.js")
 		script(type="text/javascript" src="./js/owl.carousel.min.js")
 		script(type="text/javascript" src="./js/dropdown.min.js")
@@ -37,15 +38,23 @@ html(lang="ru")
 						h1 Солнцезащитные очки
 						.filter_content
 							.tabs-sort
-								.ui.dropdown.selection.sort
-									.default.text Цена, по возрастанию
-									i.dropdown.icon
-									.menu
-										.item(data-value="PRICE_SALE") Распродажа
-										.item(data-value="PRICE_ASC" selected="selected") Цена, по возрастанию
-										.item(data-value="PRICE_DESC") Цена, по убыванию
-										.item(data-value="MAKER_GL_ASC") Популярное
-										.item(data-value="DATE_CREATED") Новизне, сначала новые
+								.js-form-select
+									input(type="hidden" name="sort" value="null" id="sort")
+									.form-select-link
+										span#sort_val Цена, по возрастанию
+										span.select-arrow
+											i.dropdown.icon(aria-hidden="true")
+									ul.form-select-list
+										li
+											span.js-select-choise(data-val="PRICE_SALE" data-id="sort") Распродажа
+										li
+											span.js-select-choise(data-val="PRICE_ASC" data-id="sort") Цена, по возрастанию
+										li
+											span.js-select-choise(data-val="PRICE_DESC" data-id="sort") Цена, по убыванию
+										li
+											span.js-select-choise(data-val="MAKER_GL_ASC" data-id="sort") Популярное
+										li
+											span.js-select-choise(data-val="DATE_CREATED" data-id="sort") Новизне, сначала новые
 						.filter_button_ct Фильтр
 							span.icon-plus
 						.filter_noselect
@@ -163,5 +172,6 @@ html(lang="ru")
 										p.adv_oth Очки любой сложности
 							.st_discription В нашем интернет-магазине Вы увидите лишь часть коллекции солнцезащитных очков, которая представлена в «Оптике Кронос». Мы отобрали ряд наиболее интересных, с нашей точки зрения, брендов, для того, чтобы Вы смогли оценить разнообразие, которое ждет Вас в наших салонах, где можно найти мужские, женские, детские солнцезащитные очки новых коллекций на любой вкус и для самых взыскательных клиентов.
 		//End content
+		script(type="text/javascript" src="./js/titov.js")
 		include footer
 		.modal

@@ -10,6 +10,8 @@ html(lang="ru")
 		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		link(rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/titov.css")
 		script(type="text/javascript" src="./js/jquery.min.js")
 		script(type="text/javascript" src="./js/owl.carousel.min.js")
 		script(type="text/javascript" src="./js/dropdown.min.js")
@@ -64,16 +66,23 @@ html(lang="ru")
 						.filter_content
 							.row
 								.tabs-sort.col-xs-12.col-sm-12.col-lg-12
-									.ui.dropdown.selection
-										input(type='hidden' name='sort')
-										.default.text Цена, по возрастанию
-										i.dropdown.icon
-										.menu
-											.item(data-value="PRICE_SALE") Распродажа
-											.item(data-value="PRICE_ASC" selected="selected") Цена, по возрастанию
-											.item(data-value="PRICE_DESC") Цена, по убыванию
-											.item(data-value="MAKER_GL_ASC") Популярное
-											.item(data-value="DATE_CREATED") Новизне, сначала новые
+									.js-form-select
+										input(type="hidden" name="sort" value="null" id="sort")
+										.form-select-link
+											span#sort_val Цена, по возрастанию
+											span.select-arrow
+												i.dropdown.icon(aria-hidden="true")
+										ul.form-select-list
+											li
+												span.js-select-choise(data-val="PRICE_SALE" data-id="sort") Распродажа
+											li
+												span.js-select-choise(data-val="PRICE_ASC" data-id="sort") Цена, по возрастанию
+											li
+												span.js-select-choise(data-val="PRICE_DESC" data-id="sort") Цена, по убыванию
+											li
+												span.js-select-choise(data-val="MAKER_GL_ASC" data-id="sort") Популярное
+											li
+												span.js-select-choise(data-val="DATE_CREATED" data-id="sort") Новизне, сначала новые
 								.tabs-section.col-xs-12.col-sm-12.col-lg-8
 									span Показать:
 									input.hidden(type="radio" id='all' name='all')
@@ -353,5 +362,6 @@ html(lang="ru")
 									.preview 
 										|Очки уже давно перестали быть просто средством коррекции зрения. Сегодня это стильный аксессуар, с помощью которого можно скорректировать форму лица и эффектно дополнить образ.
 		//End content
+		script(type="text/javascript" src="./js/titov.js")
 		include footer
 		.modal

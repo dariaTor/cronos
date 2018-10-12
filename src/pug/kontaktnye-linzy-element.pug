@@ -7,15 +7,11 @@ html(lang="ru")
 		link(rel="stylesheet" type="text/css" href="./styles/media.css")
 		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
 		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
-		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
-		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
 		link(rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/titov.css")
 		script(type="text/javascript" src="./js/jquery.min.js")
 		script(type="text/javascript" src="./js/owl.carousel.min.js")
-		script(type="text/javascript" src="./js/dropdown.min.js")
-		script(type="text/javascript" src="./js/transition.min.js")
 		script(type="text/javascript" src="./js/main.js")
 	body
 		include header
@@ -28,13 +24,15 @@ html(lang="ru")
 						span  / 
 						a(href="services.html") Контактные линзы
 						span  / 
-						|Контактные линзы 1-Day Acuvue  TruEye 30 шт.
-				.page_const
+						|Контактные линзы 1-Day Acuvue TruEye 30 шт.
+				div
 					.catalog_element
+						.visible-xs
+							h1 Контактные линзы 1-Day Acuvue TruEye 30 шт.
 						.element_block_1.item_slider
 							img(src='./img/linz_element.jpg')
 						.element_block_2.item_info
-							h1 Контактные линзы 1-Day Acuvue  TruEye 30 шт.
+							h1 Контактные линзы 1-Day Acuvue TruEye 30 шт.
 							.priceProduct
 								.mainPrice 7 345 <i class="fa fa-rub"></i>
 							.paramProduct
@@ -220,6 +218,44 @@ html(lang="ru")
 									p Уникальная технология HYDRACLEAR 1 для создания высокоувлажненных и ультрагладких контактных линз.<br/><br/>Рекомендованы для дневного ношения одноразового использования.<br/>Имеют УФ-фильтр 1 класса*. <br/>* Контактные линзы с УФ-фильтром не являются полноценной заменой солнцезащитным очкам с УФ-защитой, т.к. не полностью закрывают глаз и зону вокруг глаза.
 							#garantClickLink.item
 								p &laquo;Оптика Кронос&raquo; работает с&nbsp;лучшими поставщиками средств для контактной коррекции зрения. Подлинность всех товаров в&nbsp;интернет-магазине <a href="/sertificates/">подтверждается сертификатами</a>.
+					.like_it_block
+						.like_title Вам также могут понравиться:
+						.owl-carousel.owl-theme.owl-offers
+							- for (var x = 0; x < 5; x++)
+								.product_item.item
+									.row
+										.col-xs-12.col-sm-12.col-image
+											.image
+												.like_icons
+													span 
+														i
+												.thumbnail.two_img
+													a(href="#")
+														img.thumb(src="./img/ray-ban.jpg")
+												.flaglist
+													.flag.sale Распродажа -40%
+										.col-xs-12.col-sm-12.col-descr
+											a.name(href="#") Солнцезащитные очки Ray-Ban 4171-86513
+											.price_bl
+												span.act 4 000 руб. 
+												span.old 4 100 руб.
+										.col-xs-12.col-sm-12.col-buttons
+											.add_basket
+												span В корзину
+											.buy_one_click
+												span Купить в 1 клик
+											.info_stock
+												span Проверить наличие товара
+					.maker_block
+						.row
+							.col-md-3.col-sm-3.col-xs-6.item
+								img(src="./img/logo_biosoft.png")
+							.col-md-3.col-sm-3.col-xs-6.item
+								img(src="./img/logo_alcon.png")
+							.col-md-3.col-sm-3.col-xs-6.item
+								img(src="./img/logo_lomb.png")
+							.col-md-3.col-sm-3.col-xs-6.item
+								img(src="./img/logo_johnson.png")
 		//End content
 		script(type="text/javascript" src="./js/titov.js")
 		include footer

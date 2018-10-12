@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="./styles/dropdown.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/transition.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/titov.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="./js/dropdown.min.js"></script>
@@ -376,16 +378,16 @@
             <div class="filter_content">
               <div class="row">
                 <div class="tabs-sort col-xs-12 col-sm-12 col-lg-12">
-                  <div class="ui dropdown selection">
-                    <input type="hidden" name="sort">
-                    <div class="default text">Цена, по возрастанию</div><i class="dropdown icon"></i>
-                    <div class="menu">
-                      <div class="item" data-value="PRICE_SALE">Распродажа</div>
-                      <div class="item" data-value="PRICE_ASC" selected="selected">Цена, по возрастанию</div>
-                      <div class="item" data-value="PRICE_DESC">Цена, по убыванию</div>
-                      <div class="item" data-value="MAKER_GL_ASC">Популярное</div>
-                      <div class="item" data-value="DATE_CREATED">Новизне, сначала новые</div>
-                    </div>
+                  <div class="js-form-select">
+                    <input type="hidden" name="sort" value="null" id="sort">
+                    <div class="form-select-link"><span id="sort_val">Цена, по возрастанию</span><span class="select-arrow"><i class="dropdown icon" aria-hidden="true"></i></span></div>
+                    <ul class="form-select-list">
+                      <li><span class="js-select-choise" data-val="PRICE_SALE" data-id="sort">Распродажа</span></li>
+                      <li><span class="js-select-choise" data-val="PRICE_ASC" data-id="sort">Цена, по возрастанию</span></li>
+                      <li><span class="js-select-choise" data-val="PRICE_DESC" data-id="sort">Цена, по убыванию</span></li>
+                      <li><span class="js-select-choise" data-val="MAKER_GL_ASC" data-id="sort">Популярное</span></li>
+                      <li><span class="js-select-choise" data-val="DATE_CREATED" data-id="sort">Новизне, сначала новые</span></li>
+                    </ul>
                   </div>
                 </div>
                 <div class="tabs-section col-xs-12 col-sm-12 col-lg-8"><span>Показать:</span>
@@ -1066,6 +1068,7 @@
       </div>
     </section>
     <!--End content-->
+    <script type="text/javascript" src="./js/titov.js"></script>
     <!--Begin footer-->
     <footer>
       <div class="footer__content">

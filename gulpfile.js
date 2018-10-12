@@ -104,4 +104,4 @@ gulp.task('watch', function(){
     gulp.watch('./src/pug/*.pug', ['pug']);
 });
 
-gulp.task("default", ["sass-compile", "watch", "browser-sync"]);
+gulp.task("default", ["sass-compile", "watch", "browser-sync", "pug"]);
