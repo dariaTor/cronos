@@ -30,13 +30,6 @@ $(function(){
 	if($(window).width() < 767){
 		$(document).find('.p_blocks').find('li.hit').text('Хиты');
 	}
-	/*Выпадающий список на главной и в разделах каталога, убрать если не понадобится*/
-	$('.ui.dropdown')
-	.dropdown()
-	.transition('slide down');
-	$('.ui.dropdown.sort')
-	.dropdown()
-	.transition('slide down');
 });
 
 $(document).ready(function(){
@@ -267,6 +260,8 @@ $(document).ready(function(){
 			$('.item_accordion').find('.item').removeClass('active');
 			$('.item_accordion').find('.plashka').removeClass('active');
 			$('#'+id).addClass('active');
+			var height = $('#'+id).height() + 50 + 36;
+			$('.item_accordion').css('height', height);
 			$(this).addClass('active');
 		}
 	});
@@ -285,35 +280,47 @@ $(function() {
 	var $owlMaxCorusel = $('#bigProductCarousel'),
 		$owlMinCorusel	= $('#miniProductCarousel');
 
-		$owlMaxCorusel.owlCarousel({
-			itemsCustom: [
-				[0, 1]
-			],
-			navigation: false,
-			navigationText: false,
-			mouseDrag: false,
-			touchDrag: true,
-			addClassActive: true,
-			autoHeight: true,
-		});
-	$owlMinCorusel.owlCarousel({
-		itemsCustom: [
-			[0, 3]
-		],
-		//items:		3,
-		autoHeight:	true,
-		autoPlay:	3000,
-	})
+	$owlMinCorusel.bxSlider({
+    	mode:'vertical',
+    	controls: true,
+    	minSlides:4,
+    	maxSlides:4,
+    	moveSlides:1,
+    	slideWidth: 100,
+    	infiniteLoop:false,
+    	pager: false,
+    	slideMargin: 8,
+    	nextText: "<i class='fa fa-arr-right'></i>",
+    	prevText: "<i class='fa fa-arr-left'></i>"
+    });
+    $owlMaxCorusel.bxSlider({
+    	mode:'horizontal',
+    	controls: false,
+    	minSlides:1,
+    	maxSlides:1,
+    	moveSlides:1,
+    	infiniteLoop:false,
+    	slideMargin: 0,
+    	preventDefaultSwipeX: false,
+    	oneToOneTouch: false,
+    	touchEnabled: false,
+    	pager: true,
+    	responsive:{
+    		0:{
+    			slideWidth: 0
+    		},
+    		1140:{
+    			slideWidth: 517
+    		}
+    	}
+    });
 	$('body').on(
 		'click',
 		'#miniProductCarousel .item',
 		function(e) {
-			e.preventDefault()
-			var index = $(this).attr('data-index')
-			$owlMaxCorusel.data('owlCarousel').goTo(index)
-			$owlMinCorusel.data('owlCarousel').play()
-			$(this).parent().parent().parent().parent().find('.item').removeClass('current')
-			$(this).addClass('current')
+			e.preventDefault();
+			var index = $(this).attr('data-index');
+			$owlMaxCorusel.goToSlide(index);
 		}
 	);
 })

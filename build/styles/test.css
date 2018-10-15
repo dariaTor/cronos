@@ -34,6 +34,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -139,6 +140,8 @@ header {
 
 .header_bottom .header_menu_desktop {
   margin: 0 7px 0 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -194,11 +197,14 @@ header {
   background: #fff;
   padding: 0;
   border-top: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 29px 40px 0 rgba(0, 0, 0, 0.13);
   box-shadow: 0 29px 40px 0 rgba(0, 0, 0, 0.13);
 }
 
 .header_bottom .menu_content .menu_contentb {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 60px 0 35px 0;
 }
@@ -212,9 +218,13 @@ header {
 .header_bottom .menu_content .upmenu_cont ul {
   margin-left: 0;
   -webkit-columns: unset;
-  -moz-columns: unset;
   columns: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -285,8 +295,10 @@ header {
   top: 0;
   background: #fff;
   width: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 54px;
+  -webkit-transition: 300ms;
   transition: 300ms;
   overflow: hidden;
   z-index: 400;
@@ -368,11 +380,8 @@ section {
   padding: 0 10px 0 6px;
   display: inline-block;
   line-height: 23px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#a7dbf8), color-stop(29%, #a7dbf8), color-stop(30%, white), to(white));
   background: linear-gradient(to top, #a7dbf8 0%, #a7dbf8 29%, white 30%, white 100%);
-  background: -moz-linear-gradient(bottom, #a7dbf8 0%, #a7dbf8 29%, white 30%, white 100%);
-  background: -webkit-gradient(linear, bottom, color-stop(0%, #a7dbf8), color-stop(29%, #a7dbf8), color-stop(30%, white), color-stop(100%, white));
-  background: -webkit-linear-gradient(bottom, #a7dbf8 0%, #a7dbf8 29%, white 30%, white 100%);
-  background: -o-linear-gradient(bottom, #a7dbf8 0%, #a7dbf8 29%, white 30%, white 100%);
   background: -ms-linear-gradient(bottom, #a7dbf8 0%, #a7dbf8 29%, white 30%, white 100%);
 }
 
@@ -621,6 +630,7 @@ footer .halva_logo a img {
   left: 0;
   z-index: 100;
   background-color: #d0d0d0;
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -633,7 +643,6 @@ footer .halva_logo a img {
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border .2s ease-in-out;
-  -o-transition: border .2s ease-in-out;
   transition: border .2s ease-in-out;
 }
 
@@ -789,6 +798,7 @@ footer .halva_logo a img {
   position: relative;
   display: inline-block;
   vertical-align: top;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 100%;
   min-height: 351px;
@@ -933,6 +943,7 @@ footer .halva_logo a img {
 }
 
 .product_item:hover {
+  -webkit-box-shadow: 0 0 25px 0 #d4d2d2;
   box-shadow: 0 0 25px 0 #d4d2d2;
   overflow: hidden;
   position: absolute;
@@ -1044,7 +1055,11 @@ footer .halva_logo a img {
 }
 
 .filter_noselect {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
   justify-content: left;
   width: 100%;
   padding: 16px 0;
@@ -1268,7 +1283,12 @@ span.icon-plus {
 
 .row-flex {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 
@@ -1575,6 +1595,8 @@ table.price tr td:nth-child(2) {
 }
 
 .reviews_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1658,7 +1680,7 @@ table.price tr td:nth-child(2) {
 .catalog_element .item_info h1 {
   font-size: 24px;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .catalog_element .priceProduct {
@@ -1699,6 +1721,7 @@ table.price tr td:nth-child(2) {
   font-weight: 700;
   border-radius: 21px;
   color: #a1a7ac;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
   cursor: pointer;
 }
@@ -1852,6 +1875,7 @@ table.price tr td:nth-child(2) {
 .catalog_element .item_accordion {
   margin-top: 70px;
   min-height: 350px;
+  position: relative;
 }
 
 .catalog_element .item_accordion .plashka {
@@ -1863,6 +1887,7 @@ table.price tr td:nth-child(2) {
   margin-right: 40px;
   font-weight: 700;
   cursor: pointer;
+  float: left;
 }
 
 .catalog_element .item_accordion .plashka.active {
@@ -1870,8 +1895,11 @@ table.price tr td:nth-child(2) {
 }
 
 .catalog_element .item_accordion .item {
+  width: 100%;
   padding: 50px 40px 0 0;
   display: none;
+  position: absolute;
+  top: 40px;
 }
 
 .catalog_element .item_accordion .item.active {
@@ -1897,14 +1925,52 @@ table.price tr td:nth-child(2) {
   font-weight: 700;
 }
 
-.catalog_element .previewPic {
-  width: 78px;
-  display: inline-block;
+.catalog_element .flex-slider {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
-.catalog_element .mainImage {
-  width: calc(100% - 78px);
-  display: inline-block;
+.catalog_element .flex-slider .mainPic {
+  margin-left: 40px;
+  -ms-flex-preferred-size: calc(100% - 78px - 40px);
+  flex-basis: calc(100% - 78px - 40px);
+}
+
+.catalog_element .flex-slider .bx-wrapper {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.catalog_element .flex-slider .previewPic .bx-controls {
+  display: block;
+  height: 78px;
+}
+
+.catalog_element .flex-slider .previewPic .bx-controls .bx-prev,
+.catalog_element .flex-slider .previewPic .bx-controls .bx-next {
+  top: unset;
+  text-indent: unset;
+  bottom: 0;
+  margin: 0 -8px;
+  text-align: center;
+}
+
+.catalog_element .flex-slider .previewPic .bx-controls .fa-arr-left {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.catalog_element .flex-slider .previewPic .bx-controls .fa-arr-right {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.catalog_element .item_accordion.item_accordion_not_kl {
+  width: 100%;
 }
 
 .like_it_block {
@@ -1943,6 +2009,7 @@ table.price tr td:nth-child(2) {
 }
 
 .like_it_block .product_item:hover {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 

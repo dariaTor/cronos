@@ -7,6 +7,7 @@ var gulp = require('gulp'), //сам галп
     reload = browserSync.reload,
     pug = require('gulp-pug'), //удобная верстка
     gcmq = require('gulp-group-css-media-queries'), //группировка медиазапросов
+    prefixer = require('gulp-autoprefixer'), //проставляет кроссбраузерные префиксы
     clear = require('gulp-minify-css'); //минифицировать css
 
 var path = {
@@ -52,20 +53,20 @@ gulp.task('html:build', function () {
 });
 
 gulp.task('scripts', function () {
-  gulp.src('./bower_components/jquery/dist/jquery.min.js')
+  gulp.src('./bower_components/bxslider-4/dist/jquery.bxslider.min.js')
   .pipe(gulp.dest('./build/js/'));
-  gulp.src('./bower_components/semantic-ui-dropdown/dropdown.min.js')
-  .pipe(gulp.dest('./build/js/'));
-  gulp.src('./bower_components/semantic-ui-dropdown/index.js')
-  .pipe(gulp.dest('./build/js/'));
-  gulp.src('./bower_components/semantic-ui-transition/transition.min.js')
-  .pipe(gulp.dest('./build/js/'));
+  gulp.src('./bower_components/bxslider-4/dist/jquery.bxslider.min.css')
+  .pipe(gulp.dest('./build/styles/'));
 });
 
 gulp.task('sass-compile', function() {
 	return 	gulp.src('./src/styles/**/*.scss')
 			.pipe(sourcemaps.init())
 			.pipe(sass().on('error', sass.logError))
+            .pipe(prefixer({
+                browsers: ['last 2 versions'],
+                cascade: false
+             }))
             .pipe(gcmq())
 			.pipe(sourcemaps.write('./'))
 			.pipe(gulp.dest('./build/styles/'))

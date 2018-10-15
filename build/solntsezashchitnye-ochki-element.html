@@ -7,16 +7,12 @@
     <link rel="stylesheet" type="text/css" href="./styles/media.css">
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./styles/dropdown.min.css">
-    <link rel="stylesheet" type="text/css" href="./styles/transition.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/jquery.bxslider.min.css">
     <link rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/titov.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="./js/dropdown.min.js"></script>
-    <script type="text/javascript" src="./js/transition.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
   </head>
   <body>
     <!--Begin header-->
@@ -356,16 +352,27 @@
               <h1>Солнцезащитные очки Ray-Ban 3016-W0365</h1>
             </div>
             <div class="element_block_1 item_slider">
-              <div class="previewPic" id="miniProductCarousel">
-                <div class="item" data-index="0"><img src="./img/ochki_element_mini.jpg"></div>
-                <div class="item" data-index="1"><img src="./img/ochki_element_empty.jpg"></div>
-                <div class="item" data-index="2"><img src="./img/ochki_element_empty.jpg"></div>
-                <div class="item" data-index="3"><img src="./img/ochki_element_empty.jpg"></div>
-                <div class="item" data-index="4"><img src="./img/ochki_element_empty.jpg"></div>
-                <div class="item" data-index="5"><img src="./img/ochki_element_empty.jpg"></div>
-              </div>
-              <div class="mainImage" id="bigProductCarousel">
-                <div class="item"><a href="#"><img src="./img/ochki_element.jpg"></a></div>
+              <div class="flex-slider">
+                <div class="previewPic">
+                  <ul class="bxslider" id="miniProductCarousel">
+                    <li class="item" data-index="0"><img src="./img/ochki_element_mini.jpg"></li>
+                    <li class="item" data-index="1"><img src="./img/ochki_element_empty.jpg"></li>
+                    <li class="item" data-index="2"><img src="./img/ochki_element_empty.jpg"></li>
+                    <li class="item" data-index="3"><img src="./img/ochki_element_empty.jpg"></li>
+                    <li class="item" data-index="4"><img src="./img/ochki_element_empty.jpg"></li>
+                    <li class="item" data-index="5"><img src="./img/ochki_element_empty.jpg"></li>
+                  </ul>
+                </div>
+                <div class="mainPic">
+                  <ul class="bxslider" id="bigProductCarousel">
+                    <li class="item" data-index="0"><img src="./img/ochki_element.jpg"></li>
+                    <li class="item" data-index="1"><img src="./img/ochki_element.jpg"></li>
+                    <li class="item" data-index="2"><img src="./img/ochki_element.jpg"></li>
+                    <li class="item" data-index="3"><img src="./img/ochki_element.jpg"></li>
+                    <li class="item" data-index="4"><img src="./img/ochki_element.jpg"></li>
+                    <li class="item" data-index="5"><img src="./img/ochki_element.jpg"></li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="element_block_2 item_info">
@@ -391,34 +398,57 @@
                 </div>
               </div>
             </div>
-            <div class="element_block_3 item_accordion">
+            <div class="element_block_3 item_accordion item_accordion_not_kl">
               <div class="plashka" data-title="charahClickLink">Характеристики</div>
-              <div class="plashka active" data-title="descripClickLink">Описание</div>
-              <div class="plashka" data-title="garantClickLink">Гарантия подлинности 100%</div>
               <div class="item" id="charahClickLink">
                 <div class="ch_product">
                   <div class="ch_product_line">
-                    <div class="name">Производитель</div>
-                    <div class="value">Johnson&Johnson</div>
+                    <div class="name">Пол</div>
+                    <div class="value"><a href="#">Мужские</a><br/><a href="#">Женские</a><br/><a href="#">Унисекс</a></div>
                   </div>
                   <div class="ch_product_line">
-                    <div class="name">Упаковка, шт.</div>
-                    <div class="value">30</div>
+                    <div class="name">Возраст</div>
+                    <div class="value">Взрослые</div>
+                  </div>
+                  <div class="ch_product_line">
+                    <div class="name">Материал</div>
+                    <div class="value">Комбинированные</div>
                   </div>
                   <div class="ch_product_line">
                     <div class="name">Бренд</div>
-                    <div class="value"><a href="#">Acuvue</a></div>
+                    <div class="value">Ray-Ban</div>
+                  </div>
+                  <div class="ch_product_line">
+                    <div class="name">Тип оправы</div>
+                    <div class="value">Ободковая</div>
+                  </div>
+                  <div class="ch_product_line">
+                    <div class="name">Страна производства</div>
+                    <div class="value">Италия</div>
+                  </div>
+                  <div class="ch_product_line">
+                    <div class="name">Цвет</div>
+                    <div class="value">Черный</div>
                   </div>
                 </div>
               </div>
+              <div class="plashka active" data-title="descripClickLink">Описание</div>
               <div class="item active" id="descripClickLink">
                 <div> 
-                  <p>Уникальная технология HYDRACLEAR 1 для создания высокоувлажненных и ультрагладких контактных линз.<br/><br/>Рекомендованы для дневного ношения одноразового использования.<br/>Имеют УФ-фильтр 1 класса*. <br/>* Контактные линзы с УФ-фильтром не являются полноценной заменой солнцезащитным очкам с УФ-защитой, т.к. не полностью закрывают глаз и зону вокруг глаза.</p>
+                  <p>Солнцезащитные очки Ray-Ban Clubmaster — абсолютный хит на все времена. Модель, любимая и женщинами и мужчинами во всем мире. Комбинированная оправа из золотистого металла и черного пластика подходит к самым разным образам — и ультрамодным, и в стиле ретро. Классическая стеклянная линза от Ray-Ban обеспечивает защиту ваших глаз от вредного воздействия ультрафиолета.</p>
                 </div>
               </div>
-              <div class="item" id="garantClickLink">
-                <p>&laquo;Оптика Кронос&raquo; работает с&nbsp;лучшими поставщиками средств для контактной коррекции зрения. Подлинность всех товаров в&nbsp;интернет-магазине <a href="/sertificates/">подтверждается сертификатами</a>.</p>
+              <div class="plashka" data-title="freeDressLink">Бесплатная примерка очков</div>
+              <div class="item" id="freeDressLink">
+                <p>Вы&nbsp;можете выбрать до&nbsp;5&nbsp;моделей очков для примерки, а&nbsp;затем оплатить только понравившиеся вам модели.</p>
               </div>
+              <div class="plashka" data-title="returnMoneyClickLink">Очки в рассрочку</div>
+              <div class="item" id="returnMoneyClickLink">
+                <p>Каждую покупку можно оформить картами рассрочки "Халва" и "Совесть" до 12 месяцев без переплат, первоначального взноса и без процентов. Подробности оформления вы сможете найти <a href="/advantages/#halva_sovest">"здесь"</a>.</p>
+              </div>
+              <div class="plashka" data-title="size">Размер</div>
+              <div class="plashka" data-title="returnedAndExchangeClickLink">Возврат</div>
+              <div class="plashka" data-title="garantClickLink">Гарантия качества</div>
             </div>
           </div>
           <div class="like_it_block">
@@ -535,7 +565,9 @@
       </div>
     </section>
     <!--End content-->
+    <script type="text/javascript" src="./js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="./js/titov.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
     <!--Begin footer-->
     <footer>
       <div class="footer__content">

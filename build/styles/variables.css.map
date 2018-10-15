@@ -1,1 +1,1 @@
-{"version":3,"file":"variables.css","sources":["variables.scss"],"sourcesContent":["/*$colorRed: #e30613\r\n$colorBlack: #212121\r\n$colorGrey: #a9abac\r\n$sm: 768px\r\n$md: 992px\r\n$lg: 1200px\r\n$xl: 1600px*/"],"names":[],"mappings":"AAAA;;;;;;aAMa"}
+{"version":3,"sources":["variables.scss"],"names":[],"mappings":"AAAA;;;;;;aAMa","file":"variables.css","sourcesContent":["/*$colorRed: #e30613\r\n$colorBlack: #212121\r\n$colorGrey: #a9abac\r\n$sm: 768px\r\n$md: 992px\r\n$lg: 1200px\r\n$xl: 1600px*/"]}

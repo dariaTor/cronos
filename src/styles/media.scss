@@ -349,9 +349,7 @@
 		}	
 		.item_accordion {
 			margin-top: 15px;
-			.item{
-				padding: 30px 0 0;
-			}
+			height: auto!important;
 			.plashka::after{
 				right: 40px;
 			}
@@ -521,13 +519,30 @@
    			margin: 0;
    		}
    		.element_block_3{
-   			min-height: 657px;
-   		}	
+   			min-height: 570px;
+   		}
+   		.item_accordion.item_accordion_not_kl{
+   			margin-right: 0;
+   		}
    		.item_info{
    			h1{
    				font-size: 18px;
    				line-height: 20px;
    				margin-bottom: 20px;
+   			}
+   		}
+   		.buyBtn .add_basket{
+   			width: 119px;
+   			span{
+   				padding: 10px 0;
+   				font-size: 14px;
+   			}
+   		}
+   		.buyBtn .buy_one_click{
+   			width: 174px;
+   			span{
+   				padding: 10px 0;
+   				font-size: 14px;
    			}
    		}
 	}
@@ -694,7 +709,13 @@
    				padding: 11px 27px 11px 9px;
    				background: #f6f6f6;
    				color: #212121;
+   				float: none;
    			}
+   			.item{
+				padding: 30px 0;
+				position: relative;
+				top: 0;
+			}
 		}
 		.item_info{
    			.mainPrice{
@@ -718,19 +739,46 @@
    			padding: 5px 0;
    		}
    		.buyBtn{
-   			margin: 36px 0;
+   			margin: 24px 0;
    			.item{
    				display: block;
    				margin: 0;
    			}
    			.add_basket{
-   				padding-bottom: 30px;
+   				padding-bottom: 17px;
    			}
    		}
+   		.previewPic{
+   			display: none;
+   		}
+   		.flex-slider{
+	   		.mainPic{
+	   			flex-basis: calc(100%);
+	   			margin: 0;
+	   			.bx-wrapper{
+	   				margin-bottom: 0;
+	   			}
+	   			.bx-wrapper .bx-pager{
+	   				bottom: 15px;
+	   				a{
+	   					background: #000;
+	   					width: 4px;
+	   					height: 4px;
+	   					margin: 5px 6px;
+	   				}
+	   				a.active{
+	   					width: 8px;
+	   					height: 8px;
+	   					border-radius: 8px;
+	   					margin: 3px 6px;
+	   				}
+	   			}
+	   		}
+	   	}	
 	}
 }
 @media screen and (min-width: 1140px){
-	.header_bottom .header__burger,.header_bottom .header_block_mobile,.header_bottom .header_menu_mobile,.visible-sm{
+	.header_bottom .header__burger,.header_bottom .header_block_mobile,.header_bottom .header_menu_mobile,.visible-sm,.mainPic .bx-controls{
 		display: none;
 	}
 	.header_bottom div {

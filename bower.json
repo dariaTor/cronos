@@ -20,5 +20,8 @@
     "owl.carousel": "^2.3.4",
     "semantic-ui-dropdown": "^2.3.3",
     "semantic-ui-transition": "^2.3.3"
+  },
+  "devDependencies": {
+    "bxslider-4": "^4.2.15"
   }
 }

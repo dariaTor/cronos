@@ -7,16 +7,12 @@ html(lang="ru")
 		link(rel="stylesheet" type="text/css" href="./styles/media.css")
 		link(rel="stylesheet" type="text/css" href="./styles/normalize.css")
 		link(rel="stylesheet" type="text/css" href="./styles/bootstrap.css")
-		link(rel="stylesheet" type="text/css" href="./styles/dropdown.min.css")
-		link(rel="stylesheet" type="text/css" href="./styles/transition.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/owl.carousel.min.css")
+		link(rel="stylesheet" type="text/css" href="./styles/jquery.bxslider.min.css")
 		link(rel="stylesheet" type="text/css" href="./fonts/font_awesome/css/font-awesome.min.css")
 		link(rel="stylesheet" type="text/css" href="./styles/titov.css")
 		script(type="text/javascript" src="./js/jquery.min.js")
 		script(type="text/javascript" src="./js/owl.carousel.min.js")
-		script(type="text/javascript" src="./js/dropdown.min.js")
-		script(type="text/javascript" src="./js/transition.min.js")
-		script(type="text/javascript" src="./js/main.js")
 	body
 		include header
 		//Begin content
@@ -34,23 +30,35 @@ html(lang="ru")
 						.visible-xs
 							h1 Солнцезащитные очки Ray-Ban 3016-W0365
 						.element_block_1.item_slider
-							#miniProductCarousel.previewPic
-								.item(data-index="0")
-									img(src="./img/ochki_element_mini.jpg")
-								.item(data-index="1")
-									img(src="./img/ochki_element_empty.jpg")
-								.item(data-index="2")
-									img(src="./img/ochki_element_empty.jpg")
-								.item(data-index="3")
-									img(src="./img/ochki_element_empty.jpg")
-								.item(data-index="4")
-									img(src="./img/ochki_element_empty.jpg")
-								.item(data-index="5")
-									img(src="./img/ochki_element_empty.jpg")
-							#bigProductCarousel.mainImage
-								.item
-									a(href="#")
-										img(src='./img/ochki_element.jpg')
+							.flex-slider
+								.previewPic
+									ul#miniProductCarousel.bxslider
+										li.item(data-index="0")
+											img(src="./img/ochki_element_mini.jpg")
+										li.item(data-index="1")
+											img(src="./img/ochki_element_empty.jpg")
+										li.item(data-index="2")
+											img(src="./img/ochki_element_empty.jpg")
+										li.item(data-index="3")
+											img(src="./img/ochki_element_empty.jpg")
+										li.item(data-index="4")
+											img(src="./img/ochki_element_empty.jpg")
+										li.item(data-index="5")
+											img(src="./img/ochki_element_empty.jpg")
+								.mainPic
+									ul#bigProductCarousel.bxslider
+										li.item(data-index="0")
+											img(src='./img/ochki_element.jpg')
+										li.item(data-index="1")
+											img(src='./img/ochki_element.jpg')
+										li.item(data-index="2")
+											img(src='./img/ochki_element.jpg')
+										li.item(data-index="3")
+											img(src='./img/ochki_element.jpg')
+										li.item(data-index="4")
+											img(src='./img/ochki_element.jpg')
+										li.item(data-index="5")
+											img(src='./img/ochki_element.jpg')
 						.element_block_2.item_info
 							h1 Солнцезащитные очки Ray-Ban 3016-W0365
 							.priceProduct
@@ -76,26 +84,44 @@ html(lang="ru")
 									img(src="./img/noimg_adv_elem.png")
 									p
 										strong Бесплатная доставка <br/>от 1000 рублей
-						.element_block_3.item_accordion
+						.element_block_3.item_accordion.item_accordion_not_kl
 							.plashka(data-title="charahClickLink") Характеристики
-							.plashka.active(data-title="descripClickLink") Описание
-							.plashka(data-title="garantClickLink") Гарантия подлинности 100%
 							#charahClickLink.item
 								.ch_product
 									.ch_product_line
-										.name Производитель
-										.value Johnson&Johnson
+										.name Пол
+										.value <a href="#">Мужские</a><br/><a href="#">Женские</a><br/><a href="#">Унисекс</a>
 									.ch_product_line
-										.name Упаковка, шт.
-										.value 30
+										.name Возраст
+										.value Взрослые
+									.ch_product_line
+										.name Материал
+										.value Комбинированные
 									.ch_product_line
 										.name Бренд
-										.value <a href="#">Acuvue</a>
+										.value Ray-Ban
+									.ch_product_line
+										.name Тип оправы
+										.value Ободковая
+									.ch_product_line
+										.name Страна производства
+										.value Италия
+									.ch_product_line
+										.name Цвет
+										.value Черный
+							.plashka.active(data-title="descripClickLink") Описание
 							#descripClickLink.item.active
 								div 
-									p Уникальная технология HYDRACLEAR 1 для создания высокоувлажненных и ультрагладких контактных линз.<br/><br/>Рекомендованы для дневного ношения одноразового использования.<br/>Имеют УФ-фильтр 1 класса*. <br/>* Контактные линзы с УФ-фильтром не являются полноценной заменой солнцезащитным очкам с УФ-защитой, т.к. не полностью закрывают глаз и зону вокруг глаза.
-							#garantClickLink.item
-								p &laquo;Оптика Кронос&raquo; работает с&nbsp;лучшими поставщиками средств для контактной коррекции зрения. Подлинность всех товаров в&nbsp;интернет-магазине <a href="/sertificates/">подтверждается сертификатами</a>.
+									p Солнцезащитные очки Ray-Ban Clubmaster — абсолютный хит на все времена. Модель, любимая и женщинами и мужчинами во всем мире. Комбинированная оправа из золотистого металла и черного пластика подходит к самым разным образам — и ультрамодным, и в стиле ретро. Классическая стеклянная линза от Ray-Ban обеспечивает защиту ваших глаз от вредного воздействия ультрафиолета.
+							.plashka(data-title="freeDressLink") Бесплатная примерка очков
+							#freeDressLink.item
+								p Вы&nbsp;можете выбрать до&nbsp;5&nbsp;моделей очков для примерки, а&nbsp;затем оплатить только понравившиеся вам модели.
+							.plashka(data-title="returnMoneyClickLink") Очки в рассрочку
+							#returnMoneyClickLink.item
+								p Каждую покупку можно оформить картами рассрочки "Халва" и "Совесть" до 12 месяцев без переплат, первоначального взноса и без процентов. Подробности оформления вы сможете найти <a href="/advantages/#halva_sovest">"здесь"</a>.
+							.plashka(data-title="size") Размер
+							.plashka(data-title="returnedAndExchangeClickLink") Возврат
+							.plashka(data-title="garantClickLink") Гарантия качества
 					.like_it_block
 						.like_title Вам также могут понравиться:
 						.owl-carousel.owl-theme.owl-offers
@@ -125,6 +151,8 @@ html(lang="ru")
 											.info_stock
 												span Проверить наличие товара
 		//End content
+		script(type="text/javascript" src="./js/jquery.bxslider.min.js")
 		script(type="text/javascript" src="./js/titov.js")
+		script(type="text/javascript" src="./js/main.js")
 		include footer
 		.modal

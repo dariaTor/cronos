@@ -1377,7 +1377,7 @@ table.price{
 	.item_info h1{
 		font-size: 24px;
 		line-height: 30px;
-		margin-bottom: 30px;
+		margin:0 0 30px;
 	}
 	.priceProduct{
 		margin-bottom: 30px;
@@ -1540,6 +1540,7 @@ table.price{
 	.item_accordion{
 		margin-top: 70px;
 		min-height: 350px;
+		position: relative;
 		.plashka{
 			display: inline-block;
 			color: #a1a7ac;
@@ -1549,13 +1550,17 @@ table.price{
 			margin-right: 40px;
 			font-weight: 700;
 			cursor: pointer;
+			float: left;
 		}
 		.plashka.active{
 			color: #212121;
 		}
 		.item{
+			width: 100%;
 			padding: 50px 40px 0 0;
 			display: none;
+			position: absolute;
+			top: 40px;
 		}
 		.item.active{
 			display: block;
@@ -1578,13 +1583,38 @@ table.price{
 			font-weight: 700;
 		}
 	}
-	.previewPic{
-		width: 78px;
-		display: inline-block;
+	.flex-slider{
+		overflow: hidden;
+		display: flex;
+		position: relative;
+		.mainPic{
+			margin-left: 40px;
+			flex-basis: calc(100% - 78px - 40px);
+		}
+		.bx-wrapper{
+			border: none;
+			box-shadow: none;
+		}
+		.previewPic .bx-controls{
+			display: block;
+			height: 78px;
+			.bx-prev,.bx-next{
+			    top: unset;
+			    text-indent: unset;
+			    bottom: 0;
+			    margin: 0 -8px;
+			    text-align: center;
+			}
+			.fa-arr-left{
+				transform: rotate(-90deg);
+			}
+			.fa-arr-right{
+				transform: rotate(90deg);
+			}
+		}
 	}
-	.mainImage{
-		width: calc(100% - 78px);
-		display: inline-block;
+	.item_accordion.item_accordion_not_kl{
+		width: 100%;
 	}
 }
 .like_it_block{
